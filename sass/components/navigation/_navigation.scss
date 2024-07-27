@@ -1,6 +1,22 @@
 .main-navigation {
 	display: block;
 	width: 100%;
+	position: relative;
+
+	@include breakpoint(sm) {
+		width: calc(100% - 181px);
+		display: flex;
+		justify-content: end;
+	}
+
+	.menu {
+		@include breakpoint(sm) {
+			width: calc(100% - 1em);
+			padding-left: 1em;
+			display: flex;
+			justify-content: end;
+		}
+	}
 
 	ul {
 		display: none;
@@ -69,6 +85,35 @@
 	}
 }
 
+.menu-toggle {
+	padding: 0.4em 0.7em 0.4em;
+	position: absolute;
+	right: 0;
+	top: -40px;
+
+	@include breakpoint(sm) {
+		display: none;
+	}
+
+	span {
+		display: none;
+	}
+
+	.fa-x {
+		display: none;
+	}
+}
+
+.toggled {
+	.fa-x {
+		display: block;
+	}
+
+	.fa-bars {
+		display: none;
+	}
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
@@ -83,6 +128,9 @@
 
 	.main-navigation ul {
 		display: flex;
+		justify-content: space-between;
+		max-width: 435px;
+		width: 100%;
 	}
 }
 

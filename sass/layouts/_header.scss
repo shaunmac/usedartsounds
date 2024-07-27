@@ -1,0 +1,60 @@
+.top-header {
+    background-color: $color__background-dark;
+
+    @include breakpoint(sm) {
+        padding: 0 1em;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .fa-solid {
+        margin-right: 0.5em;
+    }
+    
+    &__p {
+        margin: 0.5em 0;
+        font-size: 0.8rem;
+        color: $color__text-light;
+        display: block;
+
+        @include breakpoint(sm) {
+            margin: 0.85em 0;
+        }
+    }
+
+    &__shipping,
+    &__cart {
+        padding: 1px 1em;
+    }
+
+    &__shipping {
+        @include breakpoint(sm) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    &__cart {
+        background-color: $color__primary;
+    }
+}
+
+.site-branding {
+    width: 181px;
+    height: 37.5px;
+    margin: 0.4em 0;
+}
+
+.site-title, 
+.site-description {
+    display: none;
+}
+
+.site-header {
+    width: 100%;
+    padding: 0 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
