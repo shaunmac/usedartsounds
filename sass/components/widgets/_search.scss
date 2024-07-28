@@ -1,0 +1,23 @@
+.search-form {
+	display: flex;
+
+    .search-field {
+        width: calc(100% - 28px);
+        border-radius: 3px 0 0 3px;
+    }
+}
+
+.wp-block-search__label {
+    display: none;
+}
+
+.search-submit {
+    width: 28px;
+    height: 32px;
+    border-left: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 3px 3px 0;
+}
