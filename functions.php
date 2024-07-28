@@ -119,7 +119,7 @@ add_action( 'after_setup_theme', 'used_art_sounds_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function used_art_soundswidgets_init() {
+function used_art_sounds_widgets_init() {
 	register_sidebar(
 		array(
 			'name'          => esc_html__( 'Sidebar', 'usedartsounds' ),
@@ -132,12 +132,12 @@ function used_art_soundswidgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'used_art_soundswidgets_init' );
+add_action( 'widgets_init', 'used_art_sounds_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function used_art_soundsscripts() {
+function used_art_sounds_scripts() {
 	wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), USED_ART_SOUNDS_VERSION );
 	wp_style_add_data( 'used-art-sounds-style', 'rtl', 'replace' );
 
@@ -147,7 +147,7 @@ function used_art_soundsscripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'used_art_soundsscripts' );
+add_action( 'wp_enqueue_scripts', 'used_art_sounds_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -182,3 +182,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
