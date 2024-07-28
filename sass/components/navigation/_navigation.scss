@@ -94,15 +94,16 @@
 }
 
 .menu-toggle {
-	width: 28px;
-	height: 28px;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	right: 0;
-	top: -40px;
+	width: 50px;
+    height: 49px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: -50px;
+	border-radius: 0;
 
 	@include breakpoint(sm) {
 		display: none;

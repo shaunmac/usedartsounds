@@ -544,9 +544,9 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid;
-	border-color: #ccc #ccc #bbb;
+	border-color: #eaeaea #eaeaea #eaeaea;
 	border-radius: 3px;
-	background: #e6e6e6;
+	background: #728cc4 #eaeaea;
 	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
 	padding: 0.6em 1em 0.4em;
@@ -556,7 +556,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-	border-color: #ccc #bbb #aaa;
+	border-color: #728cc4 #728cc4 #728cc4;
 }
 
 button:active, button:focus,
@@ -585,7 +585,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #666;
+	color: #2e3539;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
@@ -770,15 +770,16 @@ textarea {
 }
 
 .menu-toggle {
-	width: 28px;
-	height: 28px;
+	width: 50px;
+	height: 49px;
 	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
 	right: 0;
-	top: -40px;
+	top: -50px;
+	border-radius: 0;
 }
 
 @media (min-width: 37.5em) {
