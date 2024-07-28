@@ -7,6 +7,7 @@
 		width: calc(100% - 181px);
 		display: flex;
 		justify-content: end;
+		flex-wrap: wrap;
 	}
 
 	.menu {
@@ -19,10 +20,10 @@
 	}
 
 	ul {
-		display: none;
 		list-style: none;
-		margin: 0 0 10px 0;
+		margin: 0 ;
 		padding-left: 0;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
 		@include breakpoint(sm) {
 			display: flex;
@@ -75,6 +76,8 @@
 
 	li {
 		position: relative;
+		border-top: 1px solid rgba(0, 0, 0, 0.3);
+		border-bottom: 1px solid rgba(255, 255, 255, 1);
 
 		&:hover > a,
 		&.focus > a {
@@ -84,6 +87,11 @@
 	a {
 		display: block;
 		text-decoration: none;
+		padding: 0.5em 1em 0.4em;
+
+		@include breakpoint(sm) {
+			padding: 0;
+		}
 	}
 
 	.current_page_item > a,
@@ -93,17 +101,39 @@
 	}
 }
 
+.menu-wrapper {
+	width: 100vw;
+	height: calc(100vh - 50px );
+	background-color: $color__background-screen;
+	position: absolute;
+	top: -100vh;
+	left: -1em;
+	transform: translateY(0);
+	transition: transform 0.3s;
+	transition-timing-function: ease-out;
+
+	@include breakpoint(sm) {
+		width: unset;
+		height: unset;
+		background-color: transparent;
+		position: relative;
+		top: unset;
+		transform: unset;
+	}
+}
+
 .menu-toggle {
-	width: 50px;
-    height: 49px;
+	width: 37px;
+    height: 37px;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
     right: 0;
-    top: -50px;
+    top: -44px;
 	border-radius: 0;
+	z-index: 10;
 
 	@include breakpoint(sm) {
 		display: none;
@@ -126,13 +156,31 @@
 	.fa-bars {
 		display: none;
 	}
-}
 
-/* Small menu. */
-.main-navigation.toggled ul {
-	display: block;
-}
+	.menu-wrapper {
+		transform: translateY(100vh);
+		transition: transform 0.3s;
+		transition-timing-function: ease-out;
+	}
 
+	.menu-toggle {
+		border-bottom: 0;
+	}
+
+	&::after {
+		width: 37px;
+		height: 8px;
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		right: 0;
+		z-index: 10;
+		border-right: 1px solid #aaa;
+		border-left: 1px solid #aaa;
+		background-color: $color__background-screen;
+	}
+}
 
 
 .comment-navigation,
