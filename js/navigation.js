@@ -31,6 +31,15 @@
 		menu.classList.add( 'nav-menu' );
 	}
 
+	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
+	document.addEventListener( 'click', function( event ) {
+		const isClickInsideNav = siteNavigation.contains( event.target );
+		if ( ! isClickInsideNav ) {
+			siteNavigation.classList.remove( 'toggled' );
+			button.setAttribute( 'aria-expanded', 'false' );
+		}
+	} );
+
 	// Toggle the .toggled class and the aria-expanded value each time the button is clicked.
 	button.addEventListener( 'click', function() {
 		siteNavigation.classList.toggle( 'toggled' );
@@ -39,16 +48,6 @@
 			button.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
-		}
-	} );
-
-	// Remove the .toggled class and set aria-expanded to false when the user clicks outside the navigation.
-	document.addEventListener( 'click', function( event ) {
-		const isClickInside = siteNavigation.contains( event.target );
-
-		if ( ! isClickInside ) {
-			siteNavigation.classList.remove( 'toggled' );
-			button.setAttribute( 'aria-expanded', 'false' );
 		}
 	} );
 
@@ -96,4 +95,42 @@
 			menuItem.classList.toggle( 'focus' );
 		}
 	}
+
+	const headerSearch = document.getElementById( 'header-search' );
+
+	if ( ! headerSearch ) {
+		return;
+	}
+
+	const searchToggle = document.getElementById( 'search-toggle' );
+
+	if ( ! searchToggle ) {
+		return;
+	}
+
+	const searchField = document.getElementById( 'search-field' );
+
+	if ( ! searchField ) {
+		return;
+	}
+
+	searchToggle.addEventListener( 'click', function() {
+		headerSearch.classList.toggle( 'search-toggled' );
+
+		console.log(headerSearch);
+
+		if ( searchToggle.getAttribute( 'aria-expanded' ) === 'true' ) {
+			searchToggle.setAttribute( 'aria-expanded', 'false' );
+		} else {
+			searchToggle.setAttribute( 'aria-expanded', 'true' );
+		}
+	} );
+
+	document.addEventListener( 'click', function( event ) {
+		const isClickInsideSearchField = headerSearch.contains( event.target );
+		if ( ! isClickInsideSearchField ) {
+			headerSearch.classList.remove( 'search-toggled' );
+			searchToggle.setAttribute( 'aria-expanded', 'false' );
+		}
+	} );
 }() );

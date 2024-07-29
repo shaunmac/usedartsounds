@@ -715,7 +715,7 @@ textarea {
 @media (min-width: 37.5em) {
 	.main-navigation .menu {
 		width: calc(100% - 1em);
-		padding-left: 1em;
+		margin-left: 1em;
 		display: flex;
 		justify-content: end;
 	}
@@ -735,6 +735,7 @@ textarea {
 		max-width: 435px;
 		width: 100%;
 		margin-bottom: 0px;
+		border-bottom: 0;
 	}
 }
 
@@ -773,6 +774,13 @@ textarea {
 	border-bottom: 1px solid white;
 }
 
+@media (min-width: 37.5em) {
+	.main-navigation li {
+		border-top: 0;
+		border-bottom: 0;
+	}
+}
+
 .main-navigation a {
 	display: block;
 	text-decoration: none;
@@ -799,7 +807,7 @@ textarea {
 
 @media (min-width: 37.5em) {
 	.menu-wrapper {
-		width: unset;
+		width: 100%;
 		height: unset;
 		background-color: transparent;
 		position: relative;
@@ -939,6 +947,22 @@ textarea {
 	max-width: 100%;
 }
 
+.search-toggle {
+	display: none;
+}
+
+@media (min-width: 37.5em) {
+	.search-toggle {
+		display: block;
+	}
+}
+
+@media (min-width: 37.5em) {
+	.search-wrapper {
+		position: absolute;
+	}
+}
+
 .search-form {
 	display: flex;
 }
@@ -959,10 +983,6 @@ textarea {
 	padding: 7px 1em 8px 1em;
 }
 
-.wp-block-search__label {
-	display: none;
-}
-
 .search-submit {
 	width: 37px;
 	height: 40px;
@@ -973,6 +993,10 @@ textarea {
 	border-bottom: 1px solid #ccc;
 	align-items: center;
 	border-radius: 0;
+}
+
+.wp-block-search__label {
+	display: none;
 }
 
 /* Media

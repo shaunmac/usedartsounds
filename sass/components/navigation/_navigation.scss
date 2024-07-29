@@ -13,7 +13,7 @@
 	.menu {
 		@include breakpoint(sm) {
 			width: calc(100% - 1em);
-			padding-left: 1em;
+			margin-left: 1em;
 			display: flex;
 			justify-content: end;
 		}
@@ -31,6 +31,7 @@
 			max-width: 435px;
 			width: 100%;
 			margin-bottom: 0px;
+			border-bottom: 0;
 		}
 
 		ul {
@@ -79,6 +80,11 @@
 		border-top: 1px solid rgba(0, 0, 0, 0.3);
 		border-bottom: 1px solid rgba(255, 255, 255, 1);
 
+		@include breakpoint(sm) {
+			border-top: 0;
+			border-bottom: 0;
+		}
+
 		&:hover > a,
 		&.focus > a {
 		}
@@ -113,7 +119,7 @@
 	transition-timing-function: ease-out;
 
 	@include breakpoint(sm) {
-		width: unset;
+		width: 100%;
 		height: unset;
 		background-color: transparent;
 		position: relative;

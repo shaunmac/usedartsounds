@@ -1,11 +1,28 @@
-.search-form {
-	display: flex;
+.search {
+    &-toggle {
+        display: none;
 
-    @include breakpoint(sm) {
-        width: calc(100% + 181px - 28px);
+        @include breakpoint(sm) {
+            display: block;
+        }
     }
 
-    .search-field {
+    &-wrapper {
+        @include breakpoint(sm) {
+            position: absolute;
+        
+        }
+    }
+
+    &-form {
+	    display: flex;
+
+        @include breakpoint(sm) {
+            width: calc(100% + 181px - 28px);
+        }
+    }
+
+    &-form &-field {
         width: calc(100% - 37px);
         border-radius: 3px 0 0 3px;
         background: transparent;
@@ -15,20 +32,20 @@
         padding: 7px 1em 8px 1em;
     }
 
+    &-submit {
+        width: 37px;
+        height: 40px;
+        border-left: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid #ccc;
+        align-items: center;
+        border-radius: 0;
+    }
 }
 
 .wp-block-search__label {
     display: none;
 }
 
-.search-submit {
-    width: 37px;
-    height: 40px;
-    border-left: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid #ccc;
-    align-items: center;
-    border-radius: 0;
-}
