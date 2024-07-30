@@ -4,7 +4,7 @@
     justify-content: space-between;
     display: none;
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
         display: flex;
     }
 
@@ -59,7 +59,7 @@
 		z-index: 1;
 		background-color: $color__background-body;
 
-        @include breakpoint(sm) {
+        @include breakpoint(md) {
             display: none;
         }
 	}

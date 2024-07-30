@@ -3,7 +3,7 @@
 	width: 100%;
 	position: relative;
 
-	@include breakpoint(sm) {
+	@include breakpoint(md) {
 		width: calc(100% - 181px);
 		display: flex;
 		justify-content: end;
@@ -11,7 +11,7 @@
 	}
 
 	.menu {
-		@include breakpoint(sm) {
+		@include breakpoint(md) {
 			width: calc(100% - 1em);
 			margin-left: 1em;
 			display: flex;
@@ -25,7 +25,7 @@
 		padding-left: 0;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 
-		@include breakpoint(sm) {
+		@include breakpoint(md) {
 			display: flex;
 			justify-content: space-between;
 			max-width: 435px;
@@ -80,7 +80,7 @@
 		border-top: 1px solid rgba(0, 0, 0, 0.3);
 		border-bottom: 1px solid rgba(255, 255, 255, 1);
 
-		@include breakpoint(sm) {
+		@include breakpoint(md) {
 			border-top: 0;
 			border-bottom: 0;
 		}
@@ -95,7 +95,7 @@
 		text-decoration: none;
 		padding: 0.5em 1em 0.4em;
 
-		@include breakpoint(sm) {
+		@include breakpoint(md) {
 			padding: 0;
 		}
 	}
@@ -104,6 +104,7 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
+		padding: 0;
 	}
 }
 
@@ -118,13 +119,15 @@
 	transition: transform 0.3s;
 	transition-timing-function: ease-out;
 
-	@include breakpoint(sm) {
+	@include breakpoint(md) {
 		width: 100%;
 		height: unset;
 		background-color: transparent;
 		position: relative;
 		top: unset;
+		left: 0;
 		transform: unset;
+		padding-right: calc(1em + 35px);
 	}
 }
 
@@ -141,7 +144,7 @@
 	border-radius: 0;
 	z-index: 10;
 
-	@include breakpoint(sm) {
+	@include breakpoint(md) {
 		display: none;
 	}
 
@@ -167,6 +170,10 @@
 		transform: translateY(100vh);
 		transition: transform 0.3s;
 		transition-timing-function: ease-out;
+
+		@include breakpoint(md) {
+			transform: translateY(0);
+		}
 	}
 
 	.menu-toggle {
@@ -185,6 +192,10 @@
 		border-right: 1px solid #aaa;
 		border-left: 1px solid #aaa;
 		background-color: $color__background-screen;
+
+		@include breakpoint(md) {
+			display: none;
+		}
 	}
 }
 

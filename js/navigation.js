@@ -117,12 +117,12 @@
 	searchToggle.addEventListener( 'click', function() {
 		headerSearch.classList.toggle( 'search-toggled' );
 
-		console.log(headerSearch);
 
 		if ( searchToggle.getAttribute( 'aria-expanded' ) === 'true' ) {
 			searchToggle.setAttribute( 'aria-expanded', 'false' );
 		} else {
 			searchToggle.setAttribute( 'aria-expanded', 'true' );
+			searchField.focus();
 		}
 	} );
 

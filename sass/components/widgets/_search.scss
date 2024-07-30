@@ -1,24 +1,55 @@
+#header-search {
+    @include breakpoint(md) {
+        position: absolute;
+        right: 0;
+        top: 37px;
+        height: 35px;
+        width: 330px;
+    }
+}
 .search {
     &-toggle {
         display: none;
 
-        @include breakpoint(sm) {
+        @include breakpoint(md) {
             display: block;
+            width: 35px;
+            height: 35px;
+            position: absolute;
+            top: -42px;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .fa-x {
+            display: none;
         }
     }
 
     &-wrapper {
-        @include breakpoint(sm) {
-            position: absolute;
-        
+        position: relative;
+
+        @include breakpoint(md) {
+            overflow: hidden;
+            height: 36px;
         }
     }
 
     &-form {
 	    display: flex;
+        top: 0;
+        transform: translateY(0);
 
-        @include breakpoint(sm) {
-            width: calc(100% + 181px - 28px);
+        @include breakpoint(md) {
+            width: 100%;
+            position: absolute;
+            top: -35px;
+            right: -2px;
+            transform: translateY(0);
+            transition: transform 0.3s;
+		    transition-timing-function: ease-out;
         }
     }
 
@@ -30,6 +61,11 @@
         border-left: 0;
         border-bottom: 1px solid #ccc;
         padding: 7px 1em 8px 1em;
+
+        @include breakpoint(md) {
+            padding: 4px 1em 5px 1em;
+            border: 1px solid #ccc;
+        }
     }
 
     &-submit {
@@ -42,6 +78,32 @@
         border-bottom: 1px solid #ccc;
         align-items: center;
         border-radius: 0;
+
+        @include breakpoint(md) {
+            width: 35px;
+            height: 35px;
+            border-bottom: 0;
+        }
+    }
+
+    &-toggled {
+        .search-toggle {
+            .fa-search {
+                display: none;
+            }
+
+            .fa-x {
+                display: block;
+            }
+        }
+
+        .search-form {
+            @include breakpoint(md) {
+                transform: translateY(35px);
+                transition: transform 0.3s;
+                transition-timing-function: ease-out;
+            }
+        }
     }
 }
 

@@ -628,7 +628,7 @@ textarea {
 	display: none;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.top-header {
 		display: flex;
 	}
@@ -686,7 +686,7 @@ textarea {
 	background-color: #fff;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.site-header::after {
 		display: none;
 	}
@@ -703,7 +703,7 @@ textarea {
 	position: relative;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.main-navigation {
 		width: calc(100% - 181px);
 		display: flex;
@@ -712,7 +712,7 @@ textarea {
 	}
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.main-navigation .menu {
 		width: calc(100% - 1em);
 		margin-left: 1em;
@@ -728,7 +728,7 @@ textarea {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.main-navigation ul {
 		display: flex;
 		justify-content: space-between;
@@ -774,7 +774,7 @@ textarea {
 	border-bottom: 1px solid white;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.main-navigation li {
 		border-top: 0;
 		border-bottom: 0;
@@ -787,10 +787,17 @@ textarea {
 	padding: 0.5em 1em 0.4em;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.main-navigation a {
 		padding: 0;
 	}
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	padding: 0;
 }
 
 .menu-wrapper {
@@ -805,14 +812,16 @@ textarea {
 	transition-timing-function: ease-out;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.menu-wrapper {
 		width: 100%;
 		height: unset;
 		background-color: transparent;
 		position: relative;
 		top: unset;
+		left: 0;
 		transform: unset;
+		padding-right: calc(1em + 35px);
 	}
 }
 
@@ -830,7 +839,7 @@ textarea {
 	z-index: 10;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.menu-toggle {
 		display: none;
 	}
@@ -858,6 +867,12 @@ textarea {
 	transition-timing-function: ease-out;
 }
 
+@media (min-width: 768px) {
+	.toggled .menu-wrapper {
+		transform: translateY(0);
+	}
+}
+
 .toggled .menu-toggle {
 	border-bottom: 0;
 }
@@ -874,6 +889,12 @@ textarea {
 	border-right: 1px solid #aaa;
 	border-left: 1px solid #aaa;
 	background-color: #f1f1f1;
+}
+
+@media (min-width: 768px) {
+	.toggled::after {
+		display: none;
+	}
 }
 
 .site-main .comment-navigation, .site-main
@@ -947,29 +968,64 @@ textarea {
 	max-width: 100%;
 }
 
+@media (min-width: 768px) {
+	#header-search {
+		position: absolute;
+		right: 0;
+		top: 37px;
+		height: 35px;
+		width: 330px;
+	}
+}
+
 .search-toggle {
 	display: none;
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.search-toggle {
 		display: block;
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		top: -42px;
+		right: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
-@media (min-width: 37.5em) {
+.search-toggle .fa-x {
+	display: none;
+}
+
+.search-wrapper {
+	position: relative;
+}
+
+@media (min-width: 768px) {
 	.search-wrapper {
-		position: absolute;
+		overflow: hidden;
+		height: 36px;
 	}
 }
 
 .search-form {
 	display: flex;
+	top: 0;
+	transform: translateY(0);
 }
 
-@media (min-width: 37.5em) {
+@media (min-width: 768px) {
 	.search-form {
-		width: calc(100% + 181px - 28px);
+		width: 100%;
+		position: absolute;
+		top: -35px;
+		right: -2px;
+		transform: translateY(0);
+		transition: transform 0.3s;
+		transition-timing-function: ease-out;
 	}
 }
 
@@ -983,6 +1039,13 @@ textarea {
 	padding: 7px 1em 8px 1em;
 }
 
+@media (min-width: 768px) {
+	.search-form .search-field {
+		padding: 4px 1em 5px 1em;
+		border: 1px solid #ccc;
+	}
+}
+
 .search-submit {
 	width: 37px;
 	height: 40px;
@@ -993,6 +1056,30 @@ textarea {
 	border-bottom: 1px solid #ccc;
 	align-items: center;
 	border-radius: 0;
+}
+
+@media (min-width: 768px) {
+	.search-submit {
+		width: 35px;
+		height: 35px;
+		border-bottom: 0;
+	}
+}
+
+.search-toggled .search-toggle .fa-search {
+	display: none;
+}
+
+.search-toggled .search-toggle .fa-x {
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.search-toggled .search-form {
+		transform: translateY(35px);
+		transition: transform 0.3s;
+		transition-timing-function: ease-out;
+	}
 }
 
 .wp-block-search__label {
