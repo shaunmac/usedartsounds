@@ -11,17 +11,19 @@
 	}
 
 	.menu {
+
 		@include breakpoint(md) {
 			width: calc(100% - 1em);
 			margin-left: 1em;
 			display: flex;
 			justify-content: end;
 		}
+
 	}
 
 	ul {
 		list-style: none;
-		margin: 0 ;
+		margin: 0;
 		padding-left: 0;
 		border-bottom: 1px solid #ccc;
 
@@ -29,7 +31,7 @@
 			display: flex;
 			justify-content: end;
 			width: 100%;
-			margin-bottom: 0px;
+			margin-bottom: 0;
 			border-bottom: 0;
 		}
 
@@ -60,12 +62,10 @@
 			}
 
 			:hover > a,
-			.focus > a {
-			}
+			.focus > a {}
 
 			a:hover,
-			a.focus {
-			}
+			a.focus {}
 		}
 
 		li:hover > ul,
@@ -84,14 +84,14 @@
 			border-bottom: 0;
 		}
 
-		// &:hover > a,
-		// &.focus > a {}
+		// &:hover  >  a,
+		// &.focus  >  a {}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 0.5em 1em 0.4em;
+		padding: 0.5em 1em 0.6em;
 		color: $color__background-dark;
 		position: relative;
 
@@ -99,20 +99,25 @@
 			padding: 0.8em 1em;
 		}
 
-		&:visited, &:active {
+		&:visited,
+		&:active {
 			color: $color__background-dark;
 		}
 
 		&:hover {
+
 			@include breakpoint(md) {
 				color: $color__primary;
 			}
+
 		}
 
 		&:hover::after {
+
 			@include breakpoint(md) {
 				transform: scaleX(1);
 			}
+
 		}
 
 		&::after {
@@ -134,7 +139,7 @@
 		border-bottom: 0;
 
 		a {
-			background-color: $color__primary;
+			background-color: $color__background-pre;
 
 			@include breakpoint(md) {
 				background-color: transparent;
@@ -157,7 +162,8 @@
 
 .menu-wrapper {
 	width: 100vw;
-	height: calc(100vh - 50px );
+	height: calc(100vh - 50px);
+	min-height: 285px;
 	background-color: $color__background-screen;
 	position: absolute;
 	top: -100vh;
@@ -180,14 +186,14 @@
 
 .menu-toggle {
 	width: 37px;
-    height: 37px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 0;
-    top: -44px;
+	height: 37px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	right: 0;
+	top: -44px;
 	border-radius: 0;
 	z-index: 10;
 
@@ -205,7 +211,8 @@
 }
 
 .toggled {
-	.fa-x {
+
+	.menu-toggle .fa-x {
 		display: block;
 	}
 
@@ -245,7 +252,6 @@
 		}
 	}
 }
-
 
 .comment-navigation,
 .posts-navigation,

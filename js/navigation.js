@@ -117,7 +117,6 @@
 	searchToggle.addEventListener( 'click', function() {
 		headerSearch.classList.toggle( 'search-toggled' );
 
-
 		if ( searchToggle.getAttribute( 'aria-expanded' ) === 'true' ) {
 			searchToggle.setAttribute( 'aria-expanded', 'false' );
 		} else {

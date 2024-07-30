@@ -12,18 +12,20 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
+		
+		<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'footer-menu',
+					'orderby' 	     => 'menu_order'
+				)
+			);
+		?>
+
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'usedartsounds' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'usedartsounds' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'usedartsounds' ), 'usedartsounds', '<a href="https://automattic.com/">Automattic</a>' );
-				?>
+
+			
+
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

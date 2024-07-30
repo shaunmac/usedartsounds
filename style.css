@@ -679,6 +679,12 @@ textarea {
 	z-index: 15;
 }
 
+@media (min-width: 768px) {
+	.site-header {
+		padding: 35px 1em;
+	}
+}
+
 .site-header::after {
 	width: 100vw;
 	height: 50px;
@@ -815,6 +821,62 @@ textarea {
 	display: none;
 }
 
+.site-footer {
+	background-color: #23282b;
+	padding: 1.5em 1em 1.9em;
+}
+
+.menu-footer-container .menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+@media (min-width: 768px) {
+	.menu-footer-container .menu {
+		display: flex;
+	}
+}
+
+@media (min-width: 768px) {
+	.menu-footer-container .menu li:first-child a {
+		padding-left: 0;
+	}
+}
+
+.menu-footer-container .menu li {
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.menu-footer-container .menu li::after {
+		width: 1px;
+		height: 1.1em;
+		content: "";
+		display: block;
+		background-color: rgba(241, 241, 241, 0.5);
+		position: absolute;
+		right: 0;
+		top: 5px;
+	}
+}
+
+.menu-footer-container .menu li:last-child::after {
+	display: none;
+}
+
+.menu-footer-container .menu a {
+	font-size: 0.8em;
+	color: rgba(241, 241, 241, 0.5);
+	text-decoration: none;
+}
+
+@media (min-width: 768px) {
+	.menu-footer-container .menu a {
+		padding: 0 0.5em;
+	}
+}
+
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
@@ -856,7 +918,7 @@ textarea {
 		display: flex;
 		justify-content: end;
 		width: 100%;
-		margin-bottom: 0px;
+		margin-bottom: 0;
 		border-bottom: 0;
 	}
 }
@@ -906,7 +968,7 @@ textarea {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	padding: 0.5em 1em 0.4em;
+	padding: 0.5em 1em 0.6em;
 	color: #23282b;
 	position: relative;
 }
@@ -952,7 +1014,7 @@ textarea {
 }
 
 .main-navigation .current_page_item a {
-	background-color: #728cc4;
+	background-color: #eee;
 }
 
 @media (min-width: 768px) {
@@ -976,6 +1038,7 @@ textarea {
 .menu-wrapper {
 	width: 100vw;
 	height: calc(100vh - 50px);
+	min-height: 285px;
 	background-color: #f1f1f1;
 	position: absolute;
 	top: -100vh;
@@ -1026,7 +1089,7 @@ textarea {
 	display: none;
 }
 
-.toggled .fa-x {
+.toggled .menu-toggle .fa-x {
 	display: block;
 }
 

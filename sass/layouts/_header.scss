@@ -1,55 +1,59 @@
 .top-header {
-    background-color: $color__background-dark;
-    padding: 0 1em;
-    justify-content: space-between;
-    display: none;
+	background-color: $color__background-dark;
+	padding: 0 1em;
+	justify-content: space-between;
+	display: none;
 
-    @include breakpoint(md) {
-        display: flex;
-    }
+	@include breakpoint(md) {
+		display: flex;
+	}
 
-    .fa-solid {
-        margin-right: 0.5em;
-    }
-    
-    &__p {
-        margin: 0.85em 0;
-        font-size: 0.8rem;
-        color: $color__text-light;
-        display: block;
-    }
+	.fa-solid {
+		margin-right: 0.5em;
+	}
 
-    &__cart {
-        padding: 0 0.5em;
-        background-color: $color__primary;
-    }
+	&__p {
+		margin: 0.85em 0;
+		font-size: 0.8rem;
+		color: $color__text-light;
+		display: block;
+	}
+
+	&__cart {
+		padding: 0 0.5em;
+		background-color: $color__primary;
+	}
 }
 
 .site-branding {
-    max-width: 181px;
-    width: 75%;
-    height: 37.5px;
-    margin: 0.4em 0;
-    position: relative;
-    z-index: 100;
+	max-width: 181px;
+	width: 75%;
+	height: 37.5px;
+	margin: 0.4em 0;
+	position: relative;
+	z-index: 100;
 }
 
-.site-title, 
+.site-title,
 .site-description {
-    display: none;
+	display: none;
 }
 
 .site-header {
-    width: 100%;
-    padding: 0 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 15;
+	width: 100%;
+	padding: 0 1em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	z-index: 15;
 
-    &::after {
+	@include breakpoint(md) {
+		padding: 35px 1em;
+	}
+
+	&::after {
 		width: 100vw;
 		height: 50px;
 		content: "";
@@ -60,8 +64,8 @@
 		z-index: 1;
 		background-color: $color__background-body;
 
-        @include breakpoint(md) {
-            display: none;
-        }
+		@include breakpoint(md) {
+			display: none;
+		}
 	}
 }
