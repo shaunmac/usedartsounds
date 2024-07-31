@@ -96,7 +96,22 @@
 		position: relative;
 
 		@include breakpoint(md) {
+			padding: 0.8em 0.7em;
+		}
+
+		@include breakpoint(lg) {
 			padding: 0.8em 1em;
+		}
+
+		span {
+
+			@include breakpoint(md) {
+				display: none;
+			}
+
+			@include breakpoint(lg) {
+				display: inline;
+			}
 		}
 
 		&:visited,
@@ -132,6 +147,14 @@
 			transform: scaleX(0);
 			transition: transform 0.3s;
 			transition-timing-function: ease-out;
+
+			@include breakpoint(md) {
+				left: 0.7em;
+			}
+	
+			@include breakpoint(lg) {
+				left: 1em;
+			}
 		}
 	}
 
@@ -139,7 +162,8 @@
 		border-bottom: 0;
 
 		a {
-			background-color: $color__background-pre;
+			background-color: $color__text-main;
+			color: $color__background-body;
 
 			@include breakpoint(md) {
 				background-color: transparent;
@@ -147,7 +171,10 @@
 			}
 
 			&::after {
-				transform: scaleX(1);
+
+				@include breakpoint(md) {
+					transform: scaleX(1);
+				}
 			}
 		}
 	}
@@ -175,6 +202,7 @@
 	@include breakpoint(md) {
 		width: 100%;
 		height: unset;
+		min-height: unset;
 		background-color: transparent;
 		position: relative;
 		top: unset;

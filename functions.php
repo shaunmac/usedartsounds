@@ -51,8 +51,35 @@ function used_art_sounds_setup() {
 		array(
 			'header-menu' => esc_html__( 'Primary', 'usedartsounds' ),
 			'footer-menu' => esc_html__( 'Footer', 'usedartsounds' ),
+			'footer-socials' => esc_html__( 'Socials', 'usedartsounds' ),
 		)
 	);
+
+	add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+
+	function my_wp_nav_menu_objects( $items, $args ) {
+		if ($args->theme_location == 'footer-socials') {
+			// loop
+			foreach( $items as &$item ) {
+				
+				// vars
+				$icon = get_field('icon', $item);
+				
+				// append icon
+				if( $icon ) {
+	
+					$item->title = '<span>' . $item->title . '</span><i class="fa fa-'.$icon.'"></i>';
+					
+				}
+				
+			}
+		}
+		
+		
+		// return
+		return $items;
+		
+	}
 
 	/*
 		* Switch default core markup for search form, comment form, and comments

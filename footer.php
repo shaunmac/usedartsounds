@@ -24,7 +24,18 @@
 
 		<div class="site-info">
 
-			
+			<p>UsedArtSounds.com &copy; <?php echo date('Y'); ?> All Rights Reserved.</p>
+
+			<?php wp_nav_menu(
+				array(
+					'theme_location' 	=> 'footer-socials',
+					'orderby' 	     	=> 'menu_order',
+					'container' 	 	=> '',
+					'before'    		=> '',
+					'after'				=> '',
+					'container_class' 	=> 'menu-socials',
+				)
+			); ?>
 
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
