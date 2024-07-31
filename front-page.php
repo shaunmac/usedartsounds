@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file
+ * Template Name: frontpage
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -12,6 +12,7 @@
  * @package used_art_sounds
  */
 
+
 get_header();
 ?>
 
@@ -19,23 +20,27 @@ get_header();
 
 		<?php
 		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
+		
 				?>
 				<header class="home-banner">
 					<div class="home-banner__wrapper">
-						<class="home-banner__content">
+						<div class="home-banner__content">
 							<h1 class="home-banner__title"><?php the_field('title'); ?></h1>
 							<h2 class="home-banner__subtitle"><?php the_field('subtitle'); ?></h2>
 							<?php $link = get_field('link'); ?>
 							<a href="<?php esc_url( $link_url ); ?>">Shop now</a>
 						</div>
-
+                        <div class="home-banner__image">
+                        <?php 
+                            $image = get_field('image');
+                            if( !empty( $image ) ): ?>
+                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                        <?php endif; ?>
+                        </div>
 					</div>
 				</header>
 
 				<?php
-			endif;
 
 			/* Start the Loop */
 			while ( have_posts() ) :

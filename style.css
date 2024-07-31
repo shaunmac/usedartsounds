@@ -1183,11 +1183,11 @@ textarea {
 
 .toggled::after {
 	width: 37px;
-	height: 7px;
+	height: 8px;
 	content: "";
 	display: block;
 	position: absolute;
-	bottom: 0;
+	bottom: 1px;
 	right: 0;
 	z-index: 10;
 	border-right: 1px solid #aaa;
@@ -1234,7 +1234,7 @@ textarea {
 
 .post,
 .page {
-	margin: 0 0 1.5em;
+	margin: 0;
 }
 
 .updated:not(.published) {
