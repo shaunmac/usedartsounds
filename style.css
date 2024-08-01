@@ -573,6 +573,25 @@ input[type="submit"]:focus {
 	border-color: #728cc4 #728cc4 #728cc4;
 }
 
+.button {
+	border-radius: 2px;
+	background-color: #728cc4;
+	color: #fff;
+	text-decoration: none;
+	padding: 0.7em 2em;
+	font-weight: 100;
+	border: 2px solid #728cc4;
+}
+
+.button:visited {
+	color: #fff;
+}
+
+.button:hover {
+	background: transparent;
+	color: #728cc4;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -761,6 +780,7 @@ textarea {
 		transform: translateY(0);
 		transition: transform 0.2s;
 		transition-timing-function: ease-out;
+		background: #fff;
 	}
 }
 
@@ -1270,6 +1290,99 @@ textarea {
 
 .widget select {
 	max-width: 100%;
+}
+
+/* banners
+--------------------------------------------- */
+.home-banner {
+	background-image: url(assets/images/vaccume_tube_pattern.jpg);
+	background-color: #23282b;
+	background-size: 120px;
+	background-repeat: repeat;
+	padding-top: 2em;
+	margin-bottom: 14em;
+}
+
+.home-banner__wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	.home-banner__wrapper {
+		display: flex;
+		justify-content: space-between;
+		max-width: 992px;
+	}
+}
+
+.home-banner__content {
+	padding: 0 1em;
+}
+
+@media (min-width: 992px) {
+	.home-banner__content {
+		padding: 0;
+	}
+}
+
+.home-banner__title {
+	margin: 0;
+	line-height: 1;
+	font-size: 5em;
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	.home-banner__title {
+		font-size: 3.7em;
+	}
+}
+
+@media (min-width: 992px) {
+	.home-banner__title {
+		font-size: 5.3em;
+	}
+}
+
+.home-banner__subtitle {
+	color: #c4aa72;
+	margin: 0px 0 1em 0;
+	font-size: 2.55em;
+	font-weight: 100;
+}
+
+@media (min-width: 768px) {
+	.home-banner__subtitle {
+		font-size: 1.9em;
+	}
+}
+
+@media (min-width: 992px) {
+	.home-banner__subtitle {
+		font-size: 2.7em;
+	}
+}
+
+.home-banner__image-wrapper {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.home-banner__image-wrapper {
+		width: 50%;
+		margin-top: -3.3em;
+	}
+}
+
+.home-banner__image {
+	margin-bottom: -4em;
+}
+
+@media (min-width: 768px) {
+	.home-banner__image {
+		margin-bottom: -2.5em;
+	}
 }
 
 /* Media

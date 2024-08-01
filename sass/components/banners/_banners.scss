@@ -1,0 +1,75 @@
+.home-banner {
+    background-image: url(assets/images/vaccume_tube_pattern.jpg);
+    background-color: $color__background-dark;
+    background-size: 120px;
+    background-repeat: repeat;
+    padding-top: 2em;
+    margin-bottom: 14em;
+
+    &__wrapper {
+        width: 100%;
+        margin: 0 auto;
+
+        @include breakpoint(md) {
+            display: flex;
+            justify-content: space-between;
+            max-width: 992px;
+        }
+    }
+
+    &__content {
+        padding: 0 1em;
+
+        @include breakpoint(lg) {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        line-height: 1;
+        font-size: 5em;
+        color: $color__background-body;
+
+        @include breakpoint(md) {
+            font-size: 3.7em;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 5.3em;
+        }
+    }
+
+    &__subtitle {
+        color: $color__secondary;
+        margin: 0px 0 1em 0;
+        font-size: 2.55em;
+        font-weight: 100;
+
+        @include breakpoint(md) {
+            font-size: 1.9em;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 2.7em;
+        }
+    }
+
+    &__image-wrapper {
+        width: 100%;
+
+        @include breakpoint(md) {
+            width: 50%;
+            margin-top: -3.3em;
+        }
+    }
+
+    &__image {
+        margin-bottom: -4em;
+
+        @include breakpoint(md) {
+            margin-bottom: -2.5em;
+        }
+    }
+}
+

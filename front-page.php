@@ -21,26 +21,29 @@ get_header();
 		<?php
 		if ( have_posts() ) :
 		
-				?>
-				<header class="home-banner">
-					<div class="home-banner__wrapper">
-						<div class="home-banner__content">
-							<h1 class="home-banner__title"><?php the_field('title'); ?></h1>
-							<h2 class="home-banner__subtitle"><?php the_field('subtitle'); ?></h2>
-							<?php $link = get_field('link'); ?>
-							<a href="<?php esc_url( $link_url ); ?>">Shop now</a>
-						</div>
-                        <div class="home-banner__image">
-                        <?php 
-                            $image = get_field('image');
-                            if( !empty( $image ) ): ?>
-                                <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                        <?php endif; ?>
-                        </div>
-					</div>
-				</header>
+        ?>
+        <header class="home-banner">
+            <div class="home-banner__wrapper">
+                <div class="home-banner__content">
+                    <h1 class="home-banner__title"><?php the_field('title'); ?></h1>
+                    <h2 class="home-banner__subtitle"><?php the_field('subtitle'); ?></h2>
+                    <?php 
+                        $link = get_field('link');
+                        if( $link ): ?>
+                            <a class="button" href="<?php echo esc_url( $link['url'] ); ?>">SHOP NOW</a>
+                    <?php endif; ?>
+                </div>
+                <div class="home-banner__image-wrapper">
+                <?php 
+                    $image = get_field('image');
+                    if( !empty( $image ) ): ?>
+                        <img class="home-banner__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                <?php endif; ?>
+                </div>
+            </div>
+        </header>
 
-				<?php
+        <?php
 
 			/* Start the Loop */
 			while ( have_posts() ) :

@@ -19,3 +19,22 @@ input[type="submit"] {
 		border-color: $color__border-button-focus;
 	}
 }
+
+.button {
+	border-radius: 2px;
+	background-color: $color__primary;
+	color: $color__background-body;
+	text-decoration: none;
+	padding: 0.7em 2em;
+	font-weight: 100;
+	border: 2px solid $color__primary;
+
+	&:visited {
+		color: $color__background-body;
+	}
+
+	&:hover {
+		background: transparent;
+		color: $color__primary;
+	}
+}

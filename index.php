@@ -22,18 +22,9 @@ get_header();
 
 			if ( is_home() && ! is_front_page() ) :
 				?>
-				<header class="home-banner">
-					<div class="home-banner__wrapper">
-						<class="home-banner__content">
-							<h1 class="home-banner__title"><?php the_field('title'); ?></h1>
-							<h2 class="home-banner__subtitle"><?php the_field('subtitle'); ?></h2>
-							<?php $link = get_field('link'); ?>
-							<a href="<?php esc_url( $link_url ); ?>">Shop now</a>
-						</div>
-
-					</div>
+				<header>
+					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 				</header>
-
 				<?php
 			endif;
 
