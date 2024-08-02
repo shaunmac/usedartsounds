@@ -20,13 +20,16 @@ input[type="submit"] {
 	}
 }
 
-.button {
+.button, 
+.wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link {
 	border-radius: 2px;
 	background-color: $color__primary;
 	color: $color__background-body;
 	text-decoration: none;
 	padding: 0.7em 2em;
 	font-weight: 100;
+	font-size: 14px;
+	text-transform: uppercase;
 	border: 2px solid $color__primary;
 
 	&:visited {

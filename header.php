@@ -29,7 +29,7 @@
 	</div>
 
 	<div class="top-header__cart">
-		<p class="top-header__p"><i class="fa-solid fa-cart-shopping"></i> Your cart: 0 items - $0.00</p>
+		<p class="top-header__p"><i class="fa-solid fa-cart-shopping"></i> Your cart: <?php echo WC()->cart->get_cart_contents_count(); ?> items - <?php wc_cart_totals_subtotal_html(); ?></p>
 	</div>
 
 </div>  <!-- // #top-header -->
