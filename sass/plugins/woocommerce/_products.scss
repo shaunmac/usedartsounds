@@ -58,3 +58,56 @@ ul.products {
 		}
 	}
 }
+
+.wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link {
+	width: 100%;
+	margin-bottom: 0.5em;
+}
+
+.wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link {
+	display: flex;
+	flex-direction: row-reverse;
+    justify-content: center;
+	position: relative;
+
+	&.added:after {
+		content: "\2b";
+	}
+
+	&.loading:after {
+		content: "\f110";
+	}
+
+	&.added:after,
+	&.loading:after {
+		font-family: "Font Awesome 6 Free";
+		font-weight: 900;
+		position: absolute;
+		left: 1em;
+	}
+}
+
+
+
+.wc-block-grid__product-add-to-cart .added_to_cart {
+	width: 100%;
+	padding: 0.7em 2em;
+	font-weight: 100;
+	font-size: 14px;
+	color: $color__background-body;
+	text-decoration: none;
+	background-color: $color__primary;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	text-transform: uppercase;
+
+	&::after {
+		display: block;
+		font-family: "Font Awesome 6 Free";
+		content: "\f07a";
+		font-weight: 900;
+		position: absolute;
+		left: 1.4em;
+	}
+}
