@@ -676,6 +676,17 @@ textarea {
 .top-header__cart {
 	padding: 0 0.5em;
 	background-color: #728cc4;
+	position: relative;
+}
+
+.top-header__cart-link {
+	width: 100%;
+	height: 40px;
+	display: block;
+	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .site-branding {
