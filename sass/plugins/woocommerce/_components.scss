@@ -20,6 +20,10 @@
 	}
 }
 
+.woocommerce-breadcrumb { 
+	margin: 0 0 1em;
+}
+  
 /**
  * Star rating
  */
@@ -212,7 +216,7 @@ p.stars {
 }
 
 .required {
-	color: #f00;
+	color: $color__red;
 }
 
 /**

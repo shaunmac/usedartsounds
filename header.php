@@ -27,9 +27,11 @@
 	<div class="top-header__shipping">
 		<p class="top-header__p"><i class="fa-solid fa-truck-fast"></i> Free shipping on all orders over $100</p>
 	</div>
-
+	<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
 	<div class="top-header__cart">
-		<p class="top-header__p"><a href="/cart" class="top-header__cart-link">&nbsp;</a><i class="fa-solid fa-cart-shopping"></i> Your cart: <?php echo WC()->cart->get_cart_contents_count(); ?> items - <?php wc_cart_totals_subtotal_html(); ?></p>
+		<!-- <p class="top-header__p"><a href="/cart" class="top-header__cart-link">&nbsp;</a><i class="fa-solid fa-cart-shopping"></i> Your cart: <span class="cart-count"><?php //echo $items_count ? $items_count : '&nbsp;'; ?></span> items - <?php wc_cart_totals_subtotal_html(); ?></p> -->
+
+		<a class="top-header__cart-link" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa-solid fa-cart-shopping"></i> Your Cart: <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> – <?php echo WC()->cart->get_cart_total(); ?></a>
 	</div>
 
 </div>  <!-- // #top-header -->

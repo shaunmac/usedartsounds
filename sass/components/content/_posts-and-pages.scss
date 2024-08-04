@@ -84,7 +84,7 @@
 			margin: 0;
 		}
 
-		a {
+		a:not(.button) {
 			padding: 4.8em 0;
 			width: 100%;
 			display: block;

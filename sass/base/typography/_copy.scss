@@ -49,3 +49,28 @@ ins {
 big {
 	font-size: 125%;
 }
+
+.wp-block-cover .button {
+	margin-top: 1.5em;
+	display: inline-block;
+}
+
+.has-purple-color {
+	color: $color__purple;
+}
+
+.has-blue-color {
+	color: $color__primary;
+}
+
+.has-green-color {
+	color: $color__green;
+}
+
+.has-orange-color {
+	color: $color__orange;
+}
+
+.has-red-color {
+	color: $color__red;
+}

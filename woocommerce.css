@@ -316,6 +316,10 @@ ul.products li.product .button {
 	padding: 0;
 }
 
+.woocommerce-breadcrumb {
+	margin: 0 0 1em;
+}
+
 /**
  * Star rating
  */
@@ -471,7 +475,7 @@ p.stars.selected a:not(.active)::before {
 }
 
 .required {
-	color: #f00;
+	color: #C4728C;
 }
 
 /**
