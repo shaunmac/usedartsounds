@@ -6,3 +6,12 @@ body {
 	z-index: 5;
 	position: relative;
 }
+
+.content-wrapper {
+	margin: 0 1em;
+	max-width: calc(992px - 1em);
+
+	@include breakpoint(lg) {
+		margin: 0 auto;
+	}
+}

@@ -490,6 +490,17 @@ body {
 	position: relative;
 }
 
+.content-wrapper {
+	margin: 0 1em;
+	max-width: calc(992px - 1em);
+}
+
+@media (min-width: 992px) {
+	.content-wrapper {
+		margin: 0 auto;
+	}
+}
+
 hr {
 	background-color: #ccc;
 	border: 0;
@@ -1317,17 +1328,6 @@ textarea {
 	margin: 0 0 1.5em;
 }
 
-.content-wrapper {
-	margin: 0 1em;
-	max-width: 992px;
-}
-
-@media (min-width: 992px) {
-	.content-wrapper {
-		margin: 0 auto;
-	}
-}
-
 .title-full-width {
 	font-weight: 300;
 	width: 100%;
@@ -1435,7 +1435,7 @@ textarea {
 	.home-banner__wrapper {
 		display: flex;
 		justify-content: space-between;
-		max-width: 992px;
+		max-width: calc(992px - 2em);
 	}
 }
 
@@ -1465,7 +1465,7 @@ textarea {
 
 @media (min-width: 992px) {
 	.home-banner__title {
-		font-size: 5.3em;
+		font-size: 5.1em;
 	}
 }
 

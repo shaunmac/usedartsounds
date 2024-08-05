@@ -22,15 +22,6 @@
 	margin: 0 0 1.5em;
 }
 
-.content-wrapper {
-	margin: 0 1em;
-	max-width: 992px;
-
-	@include breakpoint(lg) {
-		margin: 0 auto;
-	}
-}
-
 .title-full-width {
 	font-weight: 300;
 	width: 100%;

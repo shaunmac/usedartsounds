@@ -17,7 +17,7 @@
         @include breakpoint(md) {
             display: flex;
             justify-content: space-between;
-            max-width: 992px;
+            max-width: calc(992px - 2em);
         }
     }
 
@@ -45,7 +45,7 @@
         }
 
         @include breakpoint(lg) {
-            font-size: 5.3em;
+            font-size: 5.1em;
         }
     }
 
