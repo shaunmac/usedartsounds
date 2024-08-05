@@ -677,6 +677,11 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
+	font-size: 0.8em;
+	background-color: #eaeaea;
+	padding: 0.4em;
+	color: #2e3539;
+	border-radius: 5px;
 }
 
 textarea {

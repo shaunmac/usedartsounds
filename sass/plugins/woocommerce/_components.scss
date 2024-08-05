@@ -21,12 +21,16 @@
 }
 
 .woocommerce-breadcrumb { 
-	margin: 0 0 1em;
-	padding: 0.8em 1em 1em;
+	margin: 0.5em 0 1em;
+    padding: 0.5em 1em 0.6em;
 	background-color: $color__background-dark;
 	border-radius: 9px;
 	border: 2px solid lighten($color__background-dark, 15%);
 	color: lighten($color__background-dark, 50%);
+
+	@include breakpoint(md) {
+		margin-top: -0.5em;
+	}
 
 	a {
 		text-decoration: none;
