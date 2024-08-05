@@ -27,6 +27,7 @@
 	border-radius: 9px;
 	border: 2px solid lighten($color__background-dark, 15%);
 	color: lighten($color__background-dark, 50%);
+	font-size: 0.8rem;
 
 	@include breakpoint(md) {
 		margin-top: -0.5em;
@@ -35,7 +36,9 @@
 	a {
 		text-decoration: none;
 
-		&:hover {
+		&:hover,
+		&:active,
+		&:focus {
 			color: $color__orange;
 		}
 
@@ -44,8 +47,8 @@
 			position: relative;
 			
 			&::before {
-				top: 0;
-				left: -1.9em;
+				top: -0.2em;
+    			left: -1.7em;
 				width: 1em;
 				height: 1em;
 				display: block;

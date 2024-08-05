@@ -31,6 +31,7 @@ input[type="submit"] {
 	font-size: 14px;
 	text-transform: uppercase;
 	border: 2px solid $color__primary;
+	text-align: center;
 
 	&:visited {
 		color: $color__background-body;

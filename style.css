@@ -460,7 +460,7 @@ big {
 }
 
 .has-purple-color {
-	color: #AA72C4;
+	color: #aa72c4;
 }
 
 .has-blue-color {
@@ -468,15 +468,15 @@ big {
 }
 
 .has-green-color {
-	color: #B5C472;
+	color: #b5c472;
 }
 
 .has-orange-color {
-	color: #EADAD1;
+	color: #eadad1;
 }
 
 .has-red-color {
-	color: #C4728C;
+	color: #c4728c;
 }
 
 /* Elements
@@ -567,7 +567,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #191970;
+	color: #aa72c4;
 }
 
 a:focus {
@@ -621,6 +621,7 @@ input[type="submit"]:focus {
 	font-size: 14px;
 	text-transform: uppercase;
 	border: 2px solid #728cc4;
+	text-align: center;
 }
 
 .button:visited,
