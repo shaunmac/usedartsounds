@@ -22,6 +22,38 @@
 
 .woocommerce-breadcrumb { 
 	margin: 0 0 1em;
+	padding: 0.8em 1em 1em;
+	background-color: $color__background-dark;
+	border-radius: 9px;
+	border: 2px solid lighten($color__background-dark, 15%);
+	color: lighten($color__background-dark, 50%);
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: $color__orange;
+		}
+
+		&:first-of-type {
+			margin-left: 1.5em;
+			position: relative;
+			
+			&::before {
+				top: 0;
+				left: -1.9em;
+				width: 1em;
+				height: 1em;
+				display: block;
+				font-family: "Font Awesome 6 Free";
+				content: "\f015";
+				font-weight: 900;
+				position: absolute;
+				font-size: small;
+			}
+
+		}
+	}
 }
   
 /**
