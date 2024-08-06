@@ -10,12 +10,12 @@ $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: $color__gray;
 $color__background-pre: #eee;
-$color__background-ins: #fff9c0;
+$color__background-ins: $color__orange;
 $color__background-dark: #23282b;
 
 
 $color__text-screen: #4163ab;
-$color__text-input: #2e3539;
+$color__text-input: $color__background-dark;
 $color__text-input-focus: #111;
 $color__link: $color__primary;
 

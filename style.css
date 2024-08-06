@@ -446,7 +446,7 @@ acronym {
 
 mark,
 ins {
-	background: #fff9c0;
+	background: #eadad1;
 	text-decoration: none;
 }
 
@@ -651,7 +651,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	color: #2e3539;
+	color: #23282b;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 	padding: 3px;
@@ -681,7 +681,7 @@ select {
 	font-size: 0.8em;
 	background-color: #eaeaea;
 	padding: 0.4em;
-	color: #2e3539;
+	color: #23282b;
 	border-radius: 5px;
 }
 
@@ -1155,24 +1155,24 @@ textarea {
 	}
 }
 
-.main-navigation .current_page_item {
+.main-navigation .current-menu-item {
 	border-bottom: 0;
 }
 
-.main-navigation .current_page_item a {
+.main-navigation .current-menu-item a {
 	background-color: #404040;
 	color: #fff;
 }
 
 @media (min-width: 768px) {
-	.main-navigation .current_page_item a {
+	.main-navigation .current-menu-item a {
 		background-color: transparent;
 		color: #728cc4;
 	}
 }
 
 @media (min-width: 768px) {
-	.main-navigation .current_page_item a::after {
+	.main-navigation .current-menu-item a::after {
 		transform: scaleX(1);
 	}
 }
