@@ -2,6 +2,12 @@ ul.products {
 	margin: 0;
 	padding: 0;
 
+	@include breakpoint(lg) {
+		display: flex;
+		justify-content: space-between;
+		gap: 1em;
+	}
+
 	li.product {
 		list-style: none;
 		position: relative;
@@ -18,44 +24,33 @@ ul.products {
 	}
 }
 
-@media screen and (min-width: 48em) {
+.related.products{
+	width: 100%;
+}
 
-	ul.products {
-		display: flex;
-		flex-wrap: wrap;
+ul.products.columns-1 {
+
+	li.product {
+		width: 100%;
+	}
+
+}
+
+@for $i from 2 through 6 {
+
+	ul.products.columns-#{$i} {
 
 		li.product {
 
-			@include column-width(3);
-			margin-right: $columns__margin;
-
-			&.last {
-				margin-right: 0;
+			@include breakpoint(lg) {
+				width: calc(100% / #{$i})
 			}
-		}
-	}
-
-	ul.products.columns-1 {
-
-		li.product {
-			float: none;
-			width: 100%;
+			
 		}
 
-	}
-
-	@for $i from 2 through 6 {
-
-		ul.products.columns-#{$i} {
-
-			li.product {
-
-				@include column-width( $i );
-			}
-
-		}
 	}
 }
+
 
 .wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link {
 	width: 100%;

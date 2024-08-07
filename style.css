@@ -446,8 +446,11 @@ acronym {
 
 mark,
 ins {
-	background: #eadad1;
 	text-decoration: none;
+	border-radius: 15px;
+	overflow: hidden;
+	padding: 0 0.4em;
+	border: 2px solid #eadad1;
 }
 
 big {
@@ -590,7 +593,7 @@ input[type="submit"] {
 	background: #eaeaea;
 	color: rgba(0, 0, 0, 0.8);
 	line-height: 1;
-	padding: 0.6em 1em 0.4em;
+	padding: 0.6em 1em;
 }
 
 button:hover,
@@ -652,9 +655,10 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #23282b;
-	border: 1px solid #ccc;
+	background-color: #eaeaea;
 	border-radius: 3px;
 	padding: 3px;
+	border: 2px solid #d1d1d1;
 }
 
 input[type="text"]:focus,
@@ -676,6 +680,11 @@ textarea:focus {
 	color: #111;
 }
 
+label {
+	color: #b7b7b7;
+	margin-right: 1em;
+}
+
 select {
 	border: 1px solid #ccc;
 	font-size: 0.8em;
@@ -687,6 +696,43 @@ select {
 
 textarea {
 	width: 100%;
+}
+
+input[type="checkbox"] {
+	display: none;
+}
+
+input[type="checkbox"] ~ label {
+	margin: 0 0 0 1.4em;
+	display: block;
+	position: relative;
+	padding-left: 1em;
+}
+
+input[type="checkbox"] ~ label::before {
+	width: 1em;
+	height: 1em;
+	content: "\f0c8";
+	-webkit-font-smoothing: antialiased;
+	display: var(--fa-display, inline-block);
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-rendering: auto;
+	font-family: "Font Awesome 6 Free";
+	font-weight: 900;
+	position: absolute;
+	left: -1em;
+	top: 0.1em;
+	font-size: 1.4em;
+}
+
+input[type="checkbox"]:checked ~ label::before {
+	content: "\f14a";
+}
+
+.comment-form .stars {
+	margin-top: 0;
 }
 
 /*--------------------------------------------------------------
