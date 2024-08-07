@@ -892,6 +892,10 @@ input[type="checkbox"]:checked ~ label::before {
 	}
 }
 
+.search-form label {
+	margin: 0;
+}
+
 .search-form .search-field {
 	width: calc(100% - 37px);
 	border-radius: 3px 0 0 3px;

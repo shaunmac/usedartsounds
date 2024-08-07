@@ -55,6 +55,10 @@
 			transition-timing-function: ease-out;
 			background: $color__background-body;
 		}
+
+		label { 
+			margin: 0;
+		}
 	}
 
 	&-form &-field {
@@ -110,6 +114,8 @@
 				transition: transform 0.3s;
 				transition-timing-function: ease-out;
 			}
+
+			
 		}
 	}
 }
