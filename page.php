@@ -29,7 +29,7 @@ get_header();
 			endif;
 
 		endwhile; // End of the loop.
-		get_sidebar();
+		
 		?>
 		</div>
 	</main><!-- #main -->

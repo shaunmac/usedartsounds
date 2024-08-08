@@ -11,8 +11,6 @@
 
 		.woocommerce-product-gallery {
 			position: relative;
-			border-radius: 3px;
-			overflow: hidden;
 
 			@include breakpoint(lg){
 				width: calc(50% - 0.5em);
@@ -27,6 +25,7 @@
 
 					.wp-post-image {
 						width: 100%;
+						border-radius: 3px;
 					}
 				}
 			}
@@ -111,20 +110,29 @@
 				align-items: unset;
 				align-content: flex-start;
 			}
+
+			.price {
+				width: 33%;
+				position: relative;
+				display: flex;
+				justify-content: end;
+		
+				del {
+					position: absolute;
+					top: -1.5em;
+					right: 9px;
+				}
+			}
+		
 		}
 	}
 
 	.product_title {
-		width: 70%;
+		width: 67%;
 		margin-top: 0;
 	}
 
-	.price {
-		width: 30%;
-		display: flex;
-		justify-content: end;
-	}
-
+	
 	.cart {
 		width: 100%;
 		display: flex;

@@ -2,10 +2,11 @@ ul.products {
 	margin: 0;
 	padding: 0;
 
-	@include breakpoint(lg) {
+	@include breakpoint(md) {
 		display: flex;
 		justify-content: space-between;
 		gap: 1em;
+		flex-wrap: wrap;
 	}
 
 	li.product {
@@ -15,6 +16,7 @@ ul.products {
 
 		img {
 			display: block;
+			border-radius: 3px;
 		}
 
 		.button {
@@ -42,8 +44,12 @@ ul.products.columns-1 {
 
 		li.product {
 
+			@include breakpoint(md) {
+				width: calc(50% - 0.5em);
+			}
+
 			@include breakpoint(lg) {
-				width: calc(100% / #{$i})
+				width: calc(100% / #{$i} - 1.25%);
 			}
 			
 		}
@@ -116,7 +122,7 @@ ul.products.columns-1 {
 	@include breakpoint(sm) { 
 		position: absolute;
 		right: 0;
-		top: 8em;
+		top: 5.8em;
 		font-size: 0.8em;
 	}
 }
