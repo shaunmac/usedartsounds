@@ -26,7 +26,7 @@ ul.products {
 	}
 }
 
-.related.products{
+.related.products {
 	width: 100%;
 }
 
@@ -51,7 +51,7 @@ ul.products.columns-1 {
 			@include breakpoint(lg) {
 				width: calc(100% / #{$i} - 1.25%);
 			}
-			
+
 		}
 
 	}

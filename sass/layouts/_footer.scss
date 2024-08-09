@@ -40,6 +40,7 @@
 	flex-wrap: wrap;
 
 	li:first-child a {
+
 		@include breakpoint(md) {
 			padding-left: 0;
 		}
@@ -54,6 +55,7 @@
 		}
 
 		&::after {
+
 			@include breakpoint(md) {
 				width: 1px;
 				height: 1.1em;

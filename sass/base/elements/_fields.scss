@@ -49,9 +49,9 @@ input[type="checkbox"] {
 
 input[type="checkbox"] ~ label {
 	margin: 0 0 0 1.4em;
-    display: block;
-    position: relative;
-    padding-left: 1em;
+	display: block;
+	position: relative;
+	padding-left: 1em;
 
 	&::before {
 		width: 1em;
@@ -77,6 +77,7 @@ input[type="checkbox"]:checked ~ label::before {
 }
 
 .comment-form {
+
 	.stars {
 		margin-top: 0;
 	}
