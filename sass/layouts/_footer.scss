@@ -4,32 +4,32 @@
 }
 
 .site-info {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
-    p {
-        font-size: 0.8em;
-        color: rgba($color__background-screen, 0.5);
-    }
+	p {
+		font-size: 0.8em;
+		color: rgba($color__background-screen, 0.5);
+	}
 
-    .menu {
-        display: flex;
-        justify-content: end;
-        list-style-type: none;
+	.menu {
+		display: flex;
+		justify-content: end;
+		list-style-type: none;
 
-        li:first-child {
-            margin-right: 1em;
-        }
+		li:first-child {
+			margin-right: 1em;
+		}
 
-        a { 
-            font-size: 2em;
-            color: lighten($color__background-dark, 15%);
+		a {
+			font-size: 2em;
+			color: lighten($color__background-dark, 15%);
 
-            span {
-                display: none;
-            }
-        }
-    }
+			span {
+				display: none;
+			}
+		}
+	}
 }
 
 .menu-footer-container .menu {
@@ -37,26 +37,23 @@
 	padding: 0;
 	margin: 0;
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 
 	li:first-child a {
-
 		@include breakpoint(md) {
 			padding-left: 0;
 		}
-
 	}
 
 	li {
 		position: relative;
-        width: 50%;
+		width: 50%;
 
-        @include breakpoint(md){
-            width: unset;
-        }
+		@include breakpoint(md) {
+			width: unset;
+		}
 
 		&::after {
-
 			@include breakpoint(md) {
 				width: 1px;
 				height: 1.1em;
@@ -67,7 +64,6 @@
 				right: 0;
 				top: 5px;
 			}
-
 		}
 
 		&:last-child::after {
@@ -79,10 +75,10 @@
 		font-size: 0.8em;
 		color: rgba($color__background-screen, 0.5);
 		text-decoration: none;
-        width: 100%;
+		width: 100%;
 
 		@include breakpoint(md) {
-            width: unset;
+			width: unset;
 			padding: 0 0.5em;
 		}
 	}

@@ -66,19 +66,19 @@ ul.products.columns-1 {
 .wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link {
 	display: flex;
 	flex-direction: row-reverse;
-    justify-content: center;
+	justify-content: center;
 	position: relative;
 
-	&.added:after {
+	&.added::after {
 		content: "\2b";
 	}
 
-	&.loading:after {
+	&.loading::after {
 		content: "\f110";
 	}
 
-	&.added:after,
-	&.loading:after {
+	&.added::after,
+	&.loading::after {
 		font-family: "Font Awesome 6 Free";
 		font-weight: 900;
 		position: absolute;
@@ -98,7 +98,6 @@ ul.products.columns-1 {
 	justify-content: center;
 	position: relative;
 	text-transform: uppercase;
-	color: $color__background-body;
 
 	&:visited,
 	&:focus,
@@ -118,8 +117,8 @@ ul.products.columns-1 {
 
 .woocommerce-ordering {
 	margin-bottom: 1.5em;
-	
-	@include breakpoint(sm) { 
+
+	@include breakpoint(sm) {
 		position: absolute;
 		right: 0;
 		top: 5.8em;
@@ -166,7 +165,7 @@ ul.products.columns-1 {
 
 	.price {
 		position: relative;
-	
+
 		del {
 			position: absolute;
 			top: -4em;
