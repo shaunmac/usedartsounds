@@ -178,12 +178,13 @@ function used_art_sounds_scripts() {
 
 	if (is_front_page()) {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/home.css', array(), USED_ART_SOUNDS_VERSION );
-	}else if (is_wc_endpoint_url('order-received')) {
+	} else if (is_wc_endpoint_url('order-received')) {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/order-received.css', array(), USED_ART_SOUNDS_VERSION );
-	}else if (is_product_category() || is_shop()) {
+	} else if (is_product_category() || is_shop()) {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/product-archive.css', array(), USED_ART_SOUNDS_VERSION );
-	} 
-	else {
+	} else if (is_product()) {
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/single-product.css', array(), USED_ART_SOUNDS_VERSION );
+	} else {
 		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), USED_ART_SOUNDS_VERSION );
 	}
 }
@@ -209,7 +210,7 @@ require get_template_directory() . '/inc/template-functions.php';
  */
 require get_template_directory() . '/inc/customizer.php';
 
-/**
+/**x
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
