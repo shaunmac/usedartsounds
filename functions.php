@@ -166,7 +166,6 @@ add_action( 'widgets_init', 'used_art_sounds_widgets_init' );
  * Enqueue scripts and styles.
  */
 function used_art_sounds_scripts() {
-	wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), USED_ART_SOUNDS_VERSION );
 	wp_style_add_data( 'used-art-sounds-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'used-art-sounds-navigation', get_template_directory_uri() . '/js/navigation.js', array(), USED_ART_SOUNDS_VERSION, true );
@@ -175,6 +174,17 @@ function used_art_sounds_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+
+	if (is_front_page()) {
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/home.css', array(), USED_ART_SOUNDS_VERSION );
+	}else if (is_wc_endpoint_url('order-received')) {
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/order-received.css', array(), USED_ART_SOUNDS_VERSION );
+	}else if (is_product_category() || is_shop()) {
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/product-archive.css', array(), USED_ART_SOUNDS_VERSION );
+	} 
+	else {
+		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), USED_ART_SOUNDS_VERSION );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'used_art_sounds_scripts' );

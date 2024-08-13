@@ -3,7 +3,6 @@ Theme Name: used_art_sounds
 
 WooCommerce styles override
 */
-
 /**
  * Shop tables
  */
@@ -34,8 +33,7 @@ table.shop_table_responsive tr td.product-remove::before {
 	display: none;
 }
 
-table.shop_table_responsive tr td.actions::before,
-table.shop_table_responsive tr td.download-actions::before {
+table.shop_table_responsive tr td.actions::before, table.shop_table_responsive tr td.download-actions::before {
 	display: none;
 }
 
@@ -45,24 +43,19 @@ table.shop_table_responsive tr td.download-actions .button {
 }
 
 @media screen and (min-width: 48em) {
-
 	table.shop_table_responsive thead {
 		display: table-header-group;
 	}
-
 	table.shop_table_responsive tbody th {
 		display: table-cell;
 	}
-
 	table.shop_table_responsive tr th,
 	table.shop_table_responsive tr td {
 		text-align: left;
 	}
-
 	table.shop_table_responsive tr td {
 		display: table-cell;
 	}
-
 	table.shop_table_responsive tr td::before {
 		display: none;
 	}
@@ -77,7 +70,6 @@ ul.products {
 }
 
 @media (min-width: 768px) {
-
 	ul.products {
 		display: flex;
 		justify-content: space-between;
@@ -111,70 +103,60 @@ ul.products.columns-1 li.product {
 }
 
 @media (min-width: 768px) {
-
 	ul.products.columns-2 li.product {
 		width: calc(50% - 0.5em);
 	}
 }
 
 @media (min-width: 992px) {
-
 	ul.products.columns-2 li.product {
 		width: calc(100% / 2 - 1.25%);
 	}
 }
 
 @media (min-width: 768px) {
-
 	ul.products.columns-3 li.product {
 		width: calc(50% - 0.5em);
 	}
 }
 
 @media (min-width: 992px) {
-
 	ul.products.columns-3 li.product {
 		width: calc(100% / 3 - 1.25%);
 	}
 }
 
 @media (min-width: 768px) {
-
 	ul.products.columns-4 li.product {
 		width: calc(50% - 0.5em);
 	}
 }
 
 @media (min-width: 992px) {
-
 	ul.products.columns-4 li.product {
 		width: calc(100% / 4 - 1.25%);
 	}
 }
 
 @media (min-width: 768px) {
-
 	ul.products.columns-5 li.product {
 		width: calc(50% - 0.5em);
 	}
 }
 
 @media (min-width: 992px) {
-
 	ul.products.columns-5 li.product {
 		width: calc(100% / 5 - 1.25%);
 	}
 }
 
 @media (min-width: 768px) {
-
 	ul.products.columns-6 li.product {
 		width: calc(50% - 0.5em);
 	}
 }
 
 @media (min-width: 992px) {
-
 	ul.products.columns-6 li.product {
 		width: calc(100% / 6 - 1.25%);
 	}
@@ -200,8 +182,7 @@ ul.products.columns-1 li.product {
 	content: "\f110";
 }
 
-.wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link.added::after,
-.wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link.loading::after {
+.wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link.added::after, .wc-block-grid__product-add-to-cart.wp-block-button a.wp-block-button__link.loading::after {
 	font-family: "Font Awesome 6 Free";
 	font-weight: 900;
 	position: absolute;
@@ -222,9 +203,7 @@ ul.products.columns-1 li.product {
 	text-transform: uppercase;
 }
 
-.added_to_cart:visited,
-.added_to_cart:focus,
-.added_to_cart:active {
+.added_to_cart:visited, .added_to_cart:focus, .added_to_cart:active {
 	color: #fff;
 }
 
@@ -242,7 +221,6 @@ ul.products.columns-1 li.product {
 }
 
 @media (min-width: 37.5em) {
-
 	.woocommerce-ordering {
 		position: absolute;
 		right: 0;
@@ -308,7 +286,6 @@ ul.products.columns-1 li.product {
 }
 
 @media (min-width: 992px) {
-
 	.single-product div.product {
 		display: flex;
 		flex-wrap: wrap;
@@ -321,7 +298,6 @@ ul.products.columns-1 li.product {
 }
 
 @media (min-width: 992px) {
-
 	.single-product div.product .woocommerce-product-gallery {
 		width: calc(50% - 0.5em);
 	}
@@ -440,7 +416,6 @@ ul.products.columns-1 li.product {
 }
 
 @media (min-width: 992px) {
-
 	.single-product div.product .entry-summary {
 		width: calc(50% - 0.5em);
 		align-items: unset;
@@ -507,17 +482,14 @@ ul.products.columns-1 li.product {
  * Checkout
  */
 @media screen and (min-width: 768px) {
-
 	.col2-set .form-row-first {
 		float: left;
 		margin-right: 3.8%;
 	}
-
 	.col2-set .form-row-last {
 		float: right;
 		margin-right: 0;
 	}
-
 	.col2-set .form-row-first,
 	.col2-set .form-row-last {
 		width: 48.1%;
@@ -527,7 +499,6 @@ ul.products.columns-1 li.product {
 /**
  * General WooCommerce components
  */
-
 /**
  * Header cart
  */
@@ -561,7 +532,6 @@ ul.products.columns-1 li.product {
 }
 
 @media (min-width: 768px) {
-
 	.woocommerce-breadcrumb {
 		margin-top: -0.5em;
 	}
@@ -571,9 +541,7 @@ ul.products.columns-1 li.product {
 	text-decoration: none;
 }
 
-.woocommerce-breadcrumb a:hover,
-.woocommerce-breadcrumb a:active,
-.woocommerce-breadcrumb a:focus {
+.woocommerce-breadcrumb a:hover, .woocommerce-breadcrumb a:active, .woocommerce-breadcrumb a:focus {
 	color: #eadad1;
 }
 
@@ -879,7 +847,6 @@ p.no-comments::before {
 }
 
 @media screen and (min-width: 48em) {
-
 	/**
 	 * Header cart
 	 */
@@ -892,9 +859,7 @@ p.no-comments::before {
 		display: block;
 		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	}
-
-	.site-header-cart:hover .widget_shopping_cart,
-	.site-header-cart.focus .widget_shopping_cart {
+	.site-header-cart:hover .widget_shopping_cart, .site-header-cart.focus .widget_shopping_cart {
 		left: 0;
 		display: block;
 	}
@@ -928,7 +893,6 @@ div.wc-block-components-totals-wrapper {
 }
 
 @media (min-width: 768px) {
-
 	div.wc-block-components-totals-wrapper {
 		padding-left: 0;
 		padding-right: 0;
@@ -945,7 +909,6 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image {
 }
 
 @media (min-width: 992px) {
-
 	table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__image {
 		padding-left: 0;
 	}
@@ -975,7 +938,6 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
 /**
  * WooCommerce widgets
  */
-
 /**
  * WooCommerce Price Filter
  */
@@ -1014,8 +976,7 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
 	margin-left: -1em;
 }
 
-.widget_price_filter .ui-slider .ui-slider-handle:hover,
-.widget_price_filter .ui-slider .ui-slider-handle.ui-state-active {
+.widget_price_filter .ui-slider .ui-slider-handle:hover, .widget_price_filter .ui-slider .ui-slider-handle.ui-state-active {
 	box-shadow: 0 0 0 0.25em rgba(0, 0, 0, 0.1);
 }
 
@@ -1038,3 +999,5 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
 .widget_price_filter .ui-slider-horizontal .ui-slider-range {
 	height: 100%;
 }
+
+/*# sourceMappingURL=woocommerce.css.map */

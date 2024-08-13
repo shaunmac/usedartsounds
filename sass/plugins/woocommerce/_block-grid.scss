@@ -1,0 +1,45 @@
+.wp-block-cover {
+	border-radius: 3px;
+
+	@include breakpoint(md) {
+		min-height: 110px;
+	}
+
+	&__inner-container {
+
+		p {
+			margin: 0;
+		}
+
+		a:not(.button) {
+			padding: 4.8em 0;
+			width: 100%;
+			display: block;
+			text-decoration: none;
+			line-height: 1;
+			font-size: 0.8em;
+
+			@include breakpoint(md) {
+				padding: 1.2em 0;
+			}
+		}
+	}
+}
+
+
+.wc-block-grid__products .wc-block-grid__product-image img.size-woocommerce_thumbnail,
+.wc-block-grid__product-image,
+.wc-block-grid__product .wc-block-grid__product-link {
+	width: 100%;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+.wc-block-grid__product .wc-block-grid__product-link {
+	text-align: left;
+}
+
+.wc-block-grid__product div.wc-block-grid__product-price {
+	text-align: right;
+	margin-top: -2.4em;
+}
