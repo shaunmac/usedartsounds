@@ -451,6 +451,10 @@ big {
 
 /* Elements
 --------------------------------------------- */
+html {
+	background: #23282b;
+}
+
 body {
 	background: #fff;
 }
@@ -796,6 +800,7 @@ input[type="checkbox"]:checked ~ span::before {
 	flex-wrap: wrap;
 	position: relative;
 	z-index: 15;
+	background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -1375,12 +1380,6 @@ input[type="checkbox"]:checked ~ span::before {
 	border: 2px solid #454f55;
 	color: #9da9b0;
 	font-size: 0.8rem;
-}
-
-@media (min-width: 768px) {
-	.woocommerce-breadcrumb {
-		margin-top: -0.5em;
-	}
 }
 
 .woocommerce-breadcrumb a {

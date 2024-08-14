@@ -504,6 +504,10 @@ big {
 
 /* Elements
 --------------------------------------------- */
+html {
+	background: #23282b;
+}
+
 body {
 	background: #fff;
 }
@@ -852,6 +856,7 @@ input[type="checkbox"]:checked ~ span::before {
 	flex-wrap: wrap;
 	position: relative;
 	z-index: 15;
+	background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -1496,7 +1501,7 @@ input[type="checkbox"]:checked ~ span::before {
 	margin: 0;
 	line-height: 1;
 	font-size: 5em;
-	color: #fff;
+	color: #eadad1;
 	text-shadow: 1px 1px 0 #23282b, 2px 2px 0 #23282b, 3px 3px 0 #23282b, 4px 4px 0 #23282b;
 }
 

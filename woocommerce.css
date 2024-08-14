@@ -531,12 +531,6 @@ ul.products.columns-1 li.product {
 	font-size: 0.8rem;
 }
 
-@media (min-width: 768px) {
-	.woocommerce-breadcrumb {
-		margin-top: -0.5em;
-	}
-}
-
 .woocommerce-breadcrumb a {
 	text-decoration: none;
 }

@@ -29,10 +29,6 @@
 	color: lighten($color__background-dark, 50%);
 	font-size: 0.8rem;
 
-	@include breakpoint(md) {
-		margin-top: -0.5em;
-	}
-
 	a {
 		text-decoration: none;
 
