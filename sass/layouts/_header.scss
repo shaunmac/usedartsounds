@@ -31,10 +31,17 @@
 			display: flex;
 			align-items: center;
 			font-size: 0.8rem;
+			color: $color__text-light;
 
-			&:visited {
+			&:visited,
+			&:active {
 				color: $color__text-light;
 			}
+
+			&:hover {
+				color: $color__background-body;
+			}
+
 		}
 	}
 }

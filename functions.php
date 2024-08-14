@@ -184,6 +184,8 @@ function used_art_sounds_scripts() {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/product-archive.css', array(), USED_ART_SOUNDS_VERSION );
 	} else if (is_product()) {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/single-product.css', array(), USED_ART_SOUNDS_VERSION );
+	} else if (is_account_page()) {
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/account.css', array(), USED_ART_SOUNDS_VERSION );
 	} else {
 		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), USED_ART_SOUNDS_VERSION );
 	}
