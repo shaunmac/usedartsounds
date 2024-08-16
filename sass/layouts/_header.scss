@@ -69,7 +69,6 @@
 	flex-wrap: wrap;
 	position: relative;
 	z-index: 15;
-	background-color: $color__background-body;
 
 	@include breakpoint(md) {
 		padding: 35px 1em;

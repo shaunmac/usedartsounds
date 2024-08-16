@@ -1,10 +1,6 @@
 // Import variables and mixins.
 @import "abstracts/abstracts";
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
-
 /* Normalize
 --------------------------------------------- */
 @import "generic/normalize";
@@ -12,50 +8,49 @@
 /* Box sizing
 --------------------------------------------- */
 @import "generic/box-sizing";
-
 @import "base/base";
-
-
 @import "layouts/header";
 @import "layouts/search";
 @import "layouts/footer";
-
 @import "components/navigation/navigation";
 
 $borderVal : 2px solid $color__gray;
 
 .woocommerce-table--order-details {
-    border: $borderVal;
+	border: $borderVal;
 
-    thead th {
-        border-bottom: $borderVal;
-    }
+	thead th {
+		border-bottom: $borderVal;
+	}
 
-    .product-name {
-        text-align: center;
-        border-right: $borderVal;
-        width: 75%;
-    }
+	.product-name {
+		text-align: center;
+		border-right: $borderVal;
+		width: 75%;
+	}
 
-    tbody .product-total {
-        text-align: right;
-        padding-right: 6%;
-    }
-    
-    tfoot {
-        tr:first-of-type {
-            td,
-            th {
-                border-top: $borderVal;
-            }
-        }
+	tbody .product-total {
+		text-align: right;
+		padding-right: 6%;
+	}
 
-        th {
-            border-right: $borderVal;
-        }
-        td{
-            text-align: right;
-            padding-right: 6%;
-        }
-    }
+	tfoot {
+
+		tr:first-of-type {
+
+			td,
+			th {
+				border-top: $borderVal;
+			}
+		}
+
+		th {
+			border-right: $borderVal;
+		}
+
+		td {
+			text-align: right;
+			padding-right: 6%;
+		}
+	}
 }

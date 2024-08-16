@@ -143,6 +143,12 @@ ul.products.columns-1 {
 
 	.woocommerce-loop-product__title {
 		text-decoration: none;
+
+		@include breakpoint(lg) {
+			max-width: 156px;
+			overflow: hidden;
+			height: 1.5em;
+		}
 	}
 }
 

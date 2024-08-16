@@ -62,13 +62,13 @@ textarea {
 input[type="checkbox"] {
 	display: none;
 
-	& ~ label,
-	& ~ span {
+	~ label,
+	~ span {
 		margin: 0 0 0 1.4em;
 		display: block;
 		position: relative;
 		padding-left: 1em;
-	
+
 		&::before {
 			width: 1em;
 			height: 1em;
@@ -89,8 +89,9 @@ input[type="checkbox"] {
 	}
 
 	&:checked {
-		& ~ label::before,
-		& ~ span::before	{
+
+		~ label::before,
+		~ span::before {
 			content: "\f14a";
 		}
 	}

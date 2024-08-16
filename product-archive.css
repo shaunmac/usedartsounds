@@ -800,7 +800,6 @@ input[type="checkbox"]:checked ~ span::before {
 	flex-wrap: wrap;
 	position: relative;
 	z-index: 15;
-	background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -1642,7 +1641,6 @@ p.stars.selected a:not(.active)::before {
 .woocommerce-notices-wrapper li::before {
 	width: 1em;
 	height: 1em;
-	display: block;
 	position: absolute;
 	left: -1.5em;
 	top: 0.7em;
@@ -1658,7 +1656,6 @@ p.stars.selected a:not(.active)::before {
 
 .woocommerce-noreviews {
 	border: 2px solid #eaeaea;
-	color: #c4aa72;
 	border-radius: 5px;
 	position: relative;
 	padding: 0.4em 1em 0.4em 2.5em;

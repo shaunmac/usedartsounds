@@ -331,7 +331,6 @@ p.stars {
 	&::before {
 		width: 1em;
 		height: 1em;
-		display: block;
 		position: absolute;
 		left: -1.5em;
 		top: 0.7em;
@@ -348,14 +347,13 @@ p.stars {
 
 .woocommerce-noreviews {
 	border: 2px solid $color__gray;
-	color: $color__secondary;
 	border-radius: 5px;
 	position: relative;
 	padding: 0.4em 1em 0.4em 2.5em;
 	margin: 0 0 1em 0;
 	list-style-type: none;
 	color: darken($color__gray, 30%);
-	
+
 	&::before {
 		width: 1em;
 		height: 1em;

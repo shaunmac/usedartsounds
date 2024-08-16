@@ -806,7 +806,6 @@ input[type="checkbox"]:checked ~ span::before {
 	flex-wrap: wrap;
 	position: relative;
 	z-index: 15;
-	background-color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -1414,7 +1413,6 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-MyAccount-navigation-link::before {
 	width: 1em;
 	height: 1em;
-	display: block;
 	position: absolute;
 	left: 1em;
 	top: 0.7em;

@@ -13,12 +13,10 @@
 # Base
 --------------------------------------------------------------*/
 @import "base/base";
-
 @import "layouts/header";
 @import "layouts/search";
 @import "layouts/footer";
 @import "components/navigation/navigation";
-
 @import "plugins/woocommerce/components";
 
 /* Accessibility
@@ -28,4 +26,3 @@
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
-
