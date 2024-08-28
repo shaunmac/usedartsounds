@@ -111,6 +111,11 @@
 				align-content: flex-start;
 			}
 
+			> div {
+				display: block;
+				width: 100%;
+			}
+
 			.price {
 				width: 33%;
 				position: relative;
@@ -149,6 +154,7 @@
 		.button {
 			border-top-left-radius: 0;
 			border-bottom-left-radius: 0;
+			padding: 0.7em 1.9em;
 		}
 	}
 
