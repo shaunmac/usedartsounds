@@ -31,7 +31,7 @@
 	<div class="top-header__cart">
 		<!-- <p class="top-header__p"><a href="/cart" class="top-header__cart-link">&nbsp;</a><i class="fa-solid fa-cart-shopping"></i> Your cart: <span class="cart-count"><?php //echo $items_count ? $items_count : '&nbsp;'; ?></span> items - <?php wc_cart_totals_subtotal_html(); ?></p> -->
 
-		<a class="top-header__cart-link" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa-solid fa-cart-shopping"></i> Your Cart: <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> – <?php echo WC()->cart->get_cart_total(); ?></a>
+		<a class="top-header__cart-link" href="/cart" title="<?php _e( 'View your shopping cart' ); ?>"><i class="fa-solid fa-cart-shopping"></i> Your Cart: <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> – <?php echo WC()->cart->get_cart_total(); ?></a>
 	</div>
 
 </div>  <!-- // #top-header -->
