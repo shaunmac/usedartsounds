@@ -447,14 +447,20 @@ p.no-comments {
 	width: 100%;
 }
 
-.woocommerce-cart {
+.wc-block-cart__submit-button {
+	background-color: $color__primary;
+	text-decoration: none;
+	color: $color__background-body;
+	border-radius: 3px;
 
-	.wc-block-cart__submit-button {
-		background-color: $color__primary;
-		text-decoration: none;
-		color: $color__background-body;
-		border-radius: 3px;
+	&:hover {
+		background-color: $color__background-body;
+		border: 2px solid $color__primary;
+		color: $color__primary;
 	}
+}
+
+.woocommerce-cart {
 
 	table.wc-block-cart-items,
 	.wp-block-woocommerce-cart-order-summary-block {
