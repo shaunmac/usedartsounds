@@ -312,4 +312,21 @@ function my_child_theme_setup() {
 		)
 	);
 }
+
 add_action( 'after_setup_theme', 'my_child_theme_setup', 30 );
+
+add_filter( 'woocommerce_get_image_size_single', function( $size ) {
+    return array(
+        'width'  => 600, // Set to your desired width
+        'height' => 600,
+        'crop'   => 0, // Set to 1 if you want to crop
+    );
+});
+
+add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
+    return array(
+        'width'  => 300, // Set to your desired width
+        'height' => 300, // Set to your desired height
+        'crop'   => 0,   // Set to 1 if you want to crop images to exact dimensions
+    );
+});
