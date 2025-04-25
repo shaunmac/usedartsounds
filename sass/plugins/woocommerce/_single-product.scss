@@ -123,6 +123,7 @@
 
 			.product_title {
 				width: 67%;
+				line-height: 1.2;
 			}
 		}
 
@@ -224,6 +225,11 @@
 
 	> span {
 		display: block;
+
+		> strong {
+			display: block;
+			margin-bottom: 0.5em;
+		}
 	}
 
 	a {
@@ -246,9 +252,19 @@
 			background-color: lighten($color__link, 35%);
 		}
 
+		&:hover{
+			background-color: $color__link;
+			color: $color__background-body;
+		}
+
 		&:visited {
 			border: 1px solid $color__link-visited;
 			background-color: lighten($color__link-visited, 35%);
+
+			&:hover {
+				background-color: $color__link-visited;
+				color: $color__background-body;
+			}
 		}
 	}
 }
