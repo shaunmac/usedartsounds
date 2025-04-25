@@ -47,17 +47,72 @@
 }
 
 .site-branding {
-	max-width: 181px;
+	max-width: 253px;
 	width: 75%;
 	height: 37.5px;
-	margin: 0.4em 0;
+	margin: 0.4em 0 0.4em 0;
 	position: relative;
 	z-index: 100;
+	line-height: 0.9;
+
+	> a {
+		width: 100%;
+		height: 37.5px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 100;
+	}
 }
 
 .site-title,
 .site-description {
-	display: none;
+	margin: 0;
+	transform: translateX(53px);
+
+	@include breakpoint(lg) {
+		transform: translateX(86px);
+	}
+}
+
+.site-title {
+	margin-top: 5px;
+
+	> a {
+		text-decoration: none;
+		color: #2c2c2c;
+		font-size: 1em;
+
+		@include breakpoint(md) {
+			font-size: 0.9em;
+		}
+
+		@include breakpoint(lg) {
+			font-size: 1.2em;
+		}
+	}
+}
+
+.site-description {
+	font-weight: 900;
+	text-transform: uppercase;
+	font-size: 0.8em;
+
+	@include breakpoint(lg) {
+		font-size: 1em;
+	}
+}
+
+.custom-logo {
+	width: auto;
+	height: 40px;
+	position: absolute;
+	left: 0;
+
+	@include breakpoint(lg) {
+		height: 73px;
+		top: -18px;
+	}
 }
 
 .site-header {

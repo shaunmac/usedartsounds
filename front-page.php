@@ -25,7 +25,7 @@ get_header();
         <div class="home-banner">
             <div class="home-banner__wrapper">
                 <div class="home-banner__content">
-                    <h1 class="home-banner__title"><?php the_field('title'); ?></h1>
+                    <h1 class="home-banner__title font-header"><?php the_field('title'); ?></h1>
                     <h2 class="home-banner__subtitle"><?php the_field('subtitle'); ?></h2>
                     <?php 
                         $link = get_field('link');

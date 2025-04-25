@@ -183,25 +183,34 @@
 	}
 }
 
-.list--icon {
-	margin-top: 2em;
+.single-product div.product .entry-summary > .ppcp-messages,
+.single-product div.product .entry-summary > .ppc-button-wrapper {
+	display: none !important;
+}
 
-	li {
-		list-style-type: none;
-		position: relative;
-		padding-left: 1em;
+.woocommerce-Tabs-panel--description {
 
-		.fas {
-			width: 3.5em;
-			height: 3.5em;
-			position: absolute;
-			left: -4em;
-			top: -0.2rem;
-			border-radius: 100%;
-			border: 2px solid #1c1c1c;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+	ul.list--icon {
+		margin-top: 2em;
+		margin-left: 4em;
+
+		li {
+			list-style-type: none;
+			position: relative;
+			padding-left: 1em;
+
+			.fas {
+				width: 3.5em;
+				height: 3.5em;
+				position: absolute;
+				left: -4em;
+				top: -0.2rem;
+				border-radius: 100%;
+				border: 2px solid #1c1c1c;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 		}
 	}
 }

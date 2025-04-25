@@ -46,11 +46,12 @@
 		}
 
 		@include breakpoint(lg) {
-			font-size: 5.1em;
+			font-size: 4.5em;
 		}
 	}
 
 	&__subtitle {
+		text-transform: uppercase;
 		color: $color__secondary;
 		margin: 0 0 1em 0;
 		font-size: 2.55em;
@@ -67,7 +68,7 @@
 		}
 
 		@include breakpoint(lg) {
-			font-size: 2.7em;
+			font-size: 2.3em;
 		}
 	}
 

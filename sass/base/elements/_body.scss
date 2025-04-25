@@ -11,6 +11,10 @@ body {
 	position: relative;
 }
 
+.font-header {
+	font-family: $font__header;
+}
+
 .content-wrapper {
 	margin: 0 1em;
 	max-width: calc(992px - 1em);
