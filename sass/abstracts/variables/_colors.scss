@@ -20,7 +20,7 @@ $color__text-input-focus: #111;
 $color__link: $color__primary;
 
 $color__link-visited: $color__secondary; //gold
-$color__link-hover: $color__green;
+$color__link-hover: lighten($color__primary, 15%);
 $color__text-main: #404040;
 $color__text-light: #d8e6ff;
 
