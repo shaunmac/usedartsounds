@@ -142,6 +142,7 @@ ul.products.columns-1 {
 	}
 
 	.woocommerce-loop-product__title {
+		font-size: 14px;
 		text-decoration: none;
 
 		@include breakpoint(lg) {
