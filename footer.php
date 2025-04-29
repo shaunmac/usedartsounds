@@ -9,9 +9,23 @@
  * @package used_art_sounds
  */
 
+$theme_dir = get_template_directory_uri();
+$site_title = get_bloginfo('name');
+$site_dist = get_bloginfo('description');
+
 ?>
 
-	<footer id="colophon" class="site-footer here">
+	<footer id="colophon" class="site-footer">
+
+		<div class="site-footer__logo">
+			<div class="site-footer__logo--left">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerlogo.png" width="240" height="240" class="site-footer__logo-image">
+			</div>
+			<div class="site-footer__logo--right">
+				<p class="site-footer__title font-header"><?php echo $site_title; ?></p>
+				<p class="site-footer__tagline"><?php echo $site_dist; ?></p>
+			</div>
+		</div>
 		
 		<?php
 			wp_nav_menu(

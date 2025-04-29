@@ -25,7 +25,7 @@
 <div class="top-header">
 
 	<div class="top-header__shipping">
-		<p class="top-header__p"><i class="fa-solid fa-truck-fast"></i> Free shipping on all orders over $100</p>
+		<p class="top-header__p"><i class="fa-solid fa-truck-fast"></i> Free shipping on all orders over $1000</p>
 	</div>
 	<?php $items_count = WC()->cart->get_cart_contents_count(); ?>
 	<div class="top-header__cart">
