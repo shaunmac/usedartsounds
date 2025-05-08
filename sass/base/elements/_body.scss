@@ -4,11 +4,19 @@ html {
 
 body {
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
+
+	.is-layout-flex {
+		gap: 15px;
+	}
 }
 
-.site-main {
-	z-index: 5;
-	position: relative;
+.site {
+	overflow: hidden;
+
+	&-main {
+		z-index: 5;
+		position: relative;
+	}
 }
 
 .font-header {
