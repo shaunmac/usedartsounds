@@ -27,11 +27,7 @@ get_header();
                 <div class="home-banner__content">
                     <h1 class="home-banner__title font-header"><?php the_field('title'); ?></h1>
                     <h2 class="home-banner__subtitle"><?php the_field('subtitle'); ?></h2>
-                    <?php 
-                        $link = get_field('link');
-                        if( $link ): ?>
-                            <a class="button" href="<?php echo esc_url( $link['url'] ); ?>">SHOP NOW</a>
-                    <?php endif; ?>
+                    
                 </div>
                 <div class="home-banner__image-wrapper">
                 <?php 
@@ -40,6 +36,12 @@ get_header();
                         <img class="home-banner__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 <?php endif; ?>
                 </div>
+
+                <?php 
+                    $link = get_field('link');
+                    if( $link ): ?>
+                        <a class="button" href="<?php echo esc_url( $link['url'] ); ?>">SHOP NOW</a>
+                <?php endif; ?>
             </div>
         </div>
 
