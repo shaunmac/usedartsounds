@@ -187,17 +187,17 @@ p.stars {
 		padding: 0 1em;
 		text-align: center;
 		display: flex;
-		border-bottom: 2px solid $color__gray;
+		border-bottom: 2px solid darken($color__gray, 10%);
 
 		li {
 			display: block;
 			position: relative;
 			margin: 0;
-			background-color: $color__gray;
+			background-color: darken($color__gray, 10%);
 			border-radius: 5px 5px 0 0;
-			border-top: 2px solid $color__gray;
-			border-right: 2px solid $color__gray;
-			border-left: 2px solid $color__gray;
+			border-top: 2px solid darken($color__gray, 10%);
+			border-right: 2px solid darken($color__gray, 10%);
+			border-left: 2px solid darken($color__gray, 10%);
 
 			&::after {
 				width: 100%;
