@@ -36,6 +36,7 @@ $header-text-outline-color: rgba($color__background-body, 0.4);
 			position: relative;
 
 			img {
+
 				@include breakpoint(md) {
 					max-width: unset;
 					height: calc(100vh - 200px);

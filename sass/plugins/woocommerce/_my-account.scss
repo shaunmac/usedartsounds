@@ -1,4 +1,5 @@
 .woocommerce-account.logged-in {
+
 	.woocommerce {
 		width: 100%;
 		min-height: calc(100vh - 372px);
@@ -23,7 +24,7 @@
 		padding: 0 1em;
 	}
 
-	.entry-title{
+	.entry-title {
 		margin-top: 0;
 	}
 
@@ -37,8 +38,6 @@
 		font-size: 0.8em;
 	}
 }
-
-
 
 .woocommerce-MyAccount-navigation {
 	width: 100%;
@@ -156,7 +155,9 @@
 }
 
 .woocommerce-orders {
+
 	&-table__cell-order-actions {
+
 		.button {
 			padding-top: 0;
 			padding-bottom: 0;

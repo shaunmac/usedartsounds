@@ -55,7 +55,8 @@ table.shop_table_responsive {
 
 @media screen and (min-width: 48em) {
 
-	table{
+	table {
+
 		&.shop_table_responsive {
 			width: calc(100% + 2em);
 			margin-left: -1em;
@@ -95,7 +96,7 @@ table.shop_table_responsive {
 
 		&.shop_table {
 			width: 100%;
-			
+
 			thead {
 				display: table-header-group;
 
@@ -106,6 +107,7 @@ table.shop_table_responsive {
 			}
 
 			tr {
+
 				th,
 				td {
 					text-align: left;
@@ -117,6 +119,7 @@ table.shop_table_responsive {
 			}
 
 			tfoot {
+
 				th {
 					text-align: right;
 					padding-right: 1em;
@@ -126,4 +129,3 @@ table.shop_table_responsive {
 		}
 	}
 }
-
