@@ -330,3 +330,18 @@ add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
         'crop'   => 0,   // Set to 1 if you want to crop images to exact dimensions
     );
 });
+
+function add_webp_mime_type( $mimes ) {
+    $mimes['webp'] = 'image/webp';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'add_webp_mime_type' );
+
+function serve_webp_image( $image_url ) {
+    $webp_url = str_replace( array('.jpg', '.jpeg', '.png'), '.webp', $image_url );
+    if ( file_exists( str_replace( home_url(), ABSPATH, $webp_url ) ) ) {
+        return $webp_url;
+    }
+    return $image_url;
+}
+add_filter( 'wp_get_attachment_url', 'serve_webp_image' );

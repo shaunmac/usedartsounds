@@ -38,7 +38,13 @@ get_header();
                 <?php 
                     $image = get_field('image');
                     if( !empty( $image ) ): ?>
-                        <img class="home-banner__image" src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+
+                        <picture>
+                            <source srcset="<?php echo str_replace( '.jpg', '.webp', esc_url($image['url']) ); ?>" type="image/webp">
+                            <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                        </picture>
+
+
                 <?php endif; ?>
                 </div>
 
