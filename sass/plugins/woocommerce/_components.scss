@@ -453,10 +453,15 @@ p.no-comments {
 	color: $color__background-body;
 	border-radius: 3px;
 
-	&:hover {
+	&:hover,
+	&:hover:visited {
 		background-color: $color__background-body;
 		border: 2px solid $color__primary;
 		color: $color__primary;
+	}
+
+	&:visited {
+		color: $color__background-body;
 	}
 }
 
