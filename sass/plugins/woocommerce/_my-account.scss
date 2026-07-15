@@ -123,3 +123,14 @@
 .woocommerce-form-login__submit {
 	margin-top: 1em;
 }
+
+.woocommerce-register { 
+	.registration-form > h2:first-of-type {
+		display: none;
+	}
+
+	.content-wrapper {
+		max-width: 480px;
+	}
+}
+
