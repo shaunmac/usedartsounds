@@ -1,17 +1,12 @@
 @import url(https://use.typekit.net/lhf8lxf.css);
-
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
-
 /* Normalize
 --------------------------------------------- */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
 	 ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -23,7 +18,6 @@ html {
 
 /* Sections
 	 ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
@@ -49,7 +43,6 @@ h1 {
 
 /* Grouping content
 	 ========================================================================== */
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -71,7 +64,6 @@ pre {
 
 /* Text-level semantics
 	 ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -137,7 +129,6 @@ sup {
 
 /* Embedded content
 	 ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -147,7 +138,6 @@ img {
 
 /* Forms
 	 ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -293,7 +283,6 @@ textarea {
 
 /* Interactive
 	 ========================================================================== */
-
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -310,7 +299,6 @@ summary {
 
 /* Misc
 	 ========================================================================== */
-
 /**
  * Add the correct display in IE 10+.
  */
@@ -327,7 +315,6 @@ template {
 
 /* Box sizing
 --------------------------------------------- */
-
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -343,7 +330,6 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
 /* Typography
 --------------------------------------------- */
 body,
@@ -377,8 +363,7 @@ h6 {
 	margin: 2.4em 0;
 }
 
-.title-full-width::before,
-.title-full-width::after {
+.title-full-width::before, .title-full-width::after {
 	width: calc(50% - 4.5em);
 	height: 4px;
 	border-radius: 2px;
@@ -512,7 +497,6 @@ body .is-layout-flex {
 }
 
 @media (min-width: 992px) {
-
 	.content-wrapper {
 		margin: 0 auto;
 	}
@@ -591,9 +575,7 @@ a:visited {
 	color: #c4aa72;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
 	color: #a8b8db;
 }
 
@@ -601,8 +583,7 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
 	outline: 0;
 }
 
@@ -628,8 +609,7 @@ input[type="submit"]:hover {
 	border-color: #728cc4 #728cc4 #728cc4;
 }
 
-button:active,
-button:focus,
+button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -795,7 +775,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.top-header {
 		display: flex;
 	}
@@ -828,8 +807,7 @@ input[type="checkbox"]:checked ~ span::before {
 	color: #d8e6ff;
 }
 
-.top-header__cart-link:visited,
-.top-header__cart-link:active {
+.top-header__cart-link:visited, .top-header__cart-link:active {
 	color: #d8e6ff;
 }
 
@@ -863,7 +841,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.site-title,
 	.site-description {
 		transform: translateX(86px);
@@ -881,14 +858,12 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-title > a {
 		font-size: 0.9em;
 	}
 }
 
 @media (min-width: 992px) {
-
 	.site-title > a {
 		font-size: 1.2em;
 	}
@@ -901,7 +876,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.site-description {
 		font-size: 1em;
 	}
@@ -915,7 +889,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.custom-logo {
 		height: 73px;
 		top: -18px;
@@ -934,7 +907,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-header {
 		padding: 35px 1em;
 	}
@@ -953,14 +925,12 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-header::after {
 		display: none;
 	}
 }
 
 @media (min-width: 768px) {
-
 	#header-search {
 		position: absolute;
 		right: 0;
@@ -975,7 +945,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.search-toggle {
 		width: 35px;
 		height: 35px;
@@ -1007,7 +976,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.search-wrapper {
 		overflow: hidden;
 		height: 36px;
@@ -1021,7 +989,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.search-form {
 		width: 100%;
 		position: absolute;
@@ -1049,7 +1016,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.search-form .search-field {
 		padding: 4px 1em 5px 1em;
 		border: 1px solid #ccc;
@@ -1069,7 +1035,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.search-submit {
 		width: 35px;
 		height: 35px;
@@ -1086,7 +1051,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.search-toggled .search-form {
 		transform: translateY(35px);
 		transition: transform 0.3s;
@@ -1109,7 +1073,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-footer {
 		flex-direction: row;
 		justify-content: space-between;
@@ -1127,7 +1090,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-footer__logo {
 		width: 165px;
 		flex-direction: column;
@@ -1140,7 +1102,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.site-footer__logo {
 		width: 260px;
 	}
@@ -1152,7 +1113,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-footer__logo--left {
 		width: 100%;
 	}
@@ -1182,7 +1142,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-footer__title {
 		font-size: 0.68em;
 		margin-left: 0;
@@ -1196,7 +1155,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.site-footer__tagline {
 		font-size: 0.64em;
 		margin-left: 0;
@@ -1234,14 +1192,12 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.menu-footer-container {
 		width: calc(100% - 194px);
 	}
 }
 
 @media (min-width: 992px) {
-
 	.menu-footer-container {
 		width: calc(100% - 290px);
 	}
@@ -1307,7 +1263,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.home-banner {
 		margin-bottom: 3em;
 	}
@@ -1320,7 +1275,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -1337,7 +1291,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__wrapper .button {
 		position: absolute;
 		left: 30px;
@@ -1347,7 +1300,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.home-banner__wrapper .button {
 		margin-left: 0;
 	}
@@ -1359,7 +1311,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.home-banner__content {
 		padding: 0;
 		width: 50%;
@@ -1381,7 +1332,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__content::before {
 		width: 114%;
 		height: calc(53% + 20px);
@@ -1399,14 +1349,12 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 37.5em) {
-
 	.home-banner__title {
 		font-size: 6.8vw;
 	}
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__title {
 		font-size: 3.9vw;
 		width: 109%;
@@ -1414,7 +1362,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 992px) {
-
 	.home-banner__title {
 		font-size: 2.25em;
 	}
@@ -1432,21 +1379,18 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 37.5em) {
-
 	.home-banner__subtitle {
 		font-size: 3.7vw;
 	}
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__subtitle {
 		font-size: 2.1vw;
 	}
 }
 
 @media (min-width: 992px) {
-
 	.home-banner__subtitle {
 		font-size: 1.22em;
 	}
@@ -1458,7 +1402,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__image {
 		margin-bottom: -2.5em;
 	}
@@ -1472,7 +1415,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.home-banner__image-wrapper {
 		width: 50%;
 		margin-top: -3.3em;
@@ -1503,7 +1445,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation {
 		width: calc(100% - 253px);
 		display: flex;
@@ -1513,7 +1454,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation .menu {
 		width: calc(100% - 1em);
 		margin-left: 1em;
@@ -1530,7 +1470,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation ul {
 		display: flex;
 		justify-content: end;
@@ -1565,7 +1504,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media screen and (min-width: 768px) and (max-width: 789px) {
-
 	.main-navigation ul li:first-child {
 		display: none;
 	}
@@ -1583,7 +1521,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation li {
 		border-top: 0;
 		border-bottom: 0;
@@ -1599,47 +1536,40 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation a {
 		padding: 0.8em 0.7em;
 	}
 }
 
 @media (min-width: 992px) {
-
 	.main-navigation a {
 		padding: 0.8em 1em;
 	}
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation a span {
 		display: none;
 	}
 }
 
 @media (min-width: 992px) {
-
 	.main-navigation a span {
 		display: inline;
 	}
 }
 
-.main-navigation a:visited,
-.main-navigation a:active {
+.main-navigation a:visited, .main-navigation a:active {
 	color: #23282b;
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation a:hover {
 		color: #728cc4;
 	}
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation a:hover::after {
 		transform: scaleX(1);
 	}
@@ -1660,14 +1590,12 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation a::after {
 		left: 0.7em;
 	}
 }
 
 @media (min-width: 992px) {
-
 	.main-navigation a::after {
 		left: 1em;
 	}
@@ -1683,7 +1611,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation .current-menu-item a {
 		background-color: transparent;
 		color: #728cc4;
@@ -1691,7 +1618,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.main-navigation .current-menu-item a::after {
 		transform: scaleX(1);
 	}
@@ -1718,7 +1644,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.menu-wrapper {
 		width: 100%;
 		height: unset;
@@ -1749,7 +1674,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.menu-toggle {
 		display: none;
 	}
@@ -1778,7 +1702,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.toggled .menu-wrapper {
 		transform: translateY(0);
 	}
@@ -1803,16 +1726,13 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.toggled::after {
 		display: none;
 	}
 }
 
-.site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
 .post-navigation {
 	margin: 0 0 1.5em;
 }
@@ -1844,7 +1764,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.wp-block-cover {
 		min-height: 110px;
 	}
@@ -1864,7 +1783,6 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 768px) {
-
 	.wp-block-cover__inner-container a:not(.button) {
 		padding: 1.2em 0;
 	}
@@ -1890,10 +1808,8 @@ input[type="checkbox"]:checked ~ span::before {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-
 /* Accessibility
 --------------------------------------------- */
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -1936,20 +1852,16 @@ input[type="checkbox"]:checked ~ span::before {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
-
 	/*rtl:ignore*/
 	float: left;
-
 	/*rtl:ignore*/
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 .alignright {
-
 	/*rtl:ignore*/
 	float: right;
-
 	/*rtl:ignore*/
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -2122,3 +2034,13 @@ input[type="checkbox"]:checked ~ span::before {
 .mr-10 {
 	margin-right: 10em;
 }
+
+.wc-block-grid__product .wc-block-grid__product-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 80%;
+	margin-bottom: 8px;
+}
+
+/*# sourceMappingURL=home.css.map */

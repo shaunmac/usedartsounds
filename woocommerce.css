@@ -1214,8 +1214,9 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__total {
  */
 /* ==================== MOBILE-FIRST ==================== */
 /* Make the image row full-width on mobile */
-table.wc-block-cart-items .wc-block-cart-items__row {
-	display: block !important;
+.is-small table.wc-block-cart-items .wc-block-cart-items__row,
+.is-mobile table.wc-block-cart-items .wc-block-cart-items__row {
+	display: block;
 	/* Break the table into blocks */
 	margin-bottom: 0;
 	border-bottom: 1px solid #ddd;
@@ -1227,7 +1228,6 @@ table.wc-block-cart-items .wc-block-cart-items__header th {
 }
 
 table.wc-block-cart-items td.wc-block-cart-item__total {
-	border-top: 2px solid #eaeaea;
 	margin-top: 1em;
 	padding-top: 1em;
 	position: relative;
@@ -1258,8 +1258,7 @@ table.wc-block-cart-items td.wc-block-cart-item__total {
 }
 
 .wc-block-cart-item__image {
-	width: calc(50% - 15px) !important;
-	padding: 0 0 0 15px !important;
+	padding: 0 15px 0 15px !important;
 	margin-bottom: 15px;
 	text-align: center;
 	display: block;
@@ -1305,6 +1304,10 @@ table.wc-block-cart-items td.wc-block-cart-item__total {
 	position: absolute;
 	bottom: 0;
 	right: -100%;
+}
+
+table.wc-block-cart-items .wc-block-cart-item__total {
+	border-top: 1px solid #dfdfdf;
 }
 
 /* ==================== TABLET & DESKTOP ==================== */

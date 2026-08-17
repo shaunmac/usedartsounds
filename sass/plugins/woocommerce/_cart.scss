@@ -4,8 +4,9 @@ table.wc-block-cart-items {
 
     .wc-block-cart-items {
 
-        &__row {
-            display: block !important;           /* Break the table into blocks */
+        .is-small &__row,
+        .is-mobile &__row {
+            display: block;           /* Break the table into blocks */
             margin-bottom: 0;
             border-bottom: 1px solid #ddd;
             padding-bottom: 20px;
@@ -20,7 +21,6 @@ table.wc-block-cart-items {
 
 table.wc-block-cart-items td.wc-block-cart-item {
     &__total {
-        border-top: 2px solid #eaeaea;
         margin-top: 1em;
         padding-top: 1em;
         position: relative;
@@ -54,8 +54,8 @@ table.wc-block-cart-items td.wc-block-cart-item {
 
     /* Image on top - full width */
     &__image {
-        width: calc(50% - 15px) !important;
-        padding: 0 0 0 15px !important; 
+        // width: calc(50% - 15px) !important;
+        padding: 0 15px 0 15px !important; 
         margin-bottom: 15px;
         text-align: center;
         display: block;
@@ -103,6 +103,10 @@ table.wc-block-cart-items td.wc-block-cart-item {
             bottom: 0;
             right: -100%;
         }
+    }
+
+    table.wc-block-cart-items &__total {
+        border-top: 1px solid #dfdfdf;
     }
 }
 

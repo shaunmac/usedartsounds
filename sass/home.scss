@@ -51,3 +51,11 @@
 /* Alignments
 --------------------------------------------- */
 @import "utilities/alignments";
+
+.wc-block-grid__product .wc-block-grid__product-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	max-width: 80%;
+    margin-bottom: 8px;
+}
