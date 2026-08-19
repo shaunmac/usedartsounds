@@ -23,6 +23,9 @@ get_header();
 		
         ?>
         <div class="home-banner">
+
+            <div id="line-wave"></div>
+
             <div class="home-banner__wrapper">
                 <div class="home-banner__content">
                     <h1 class="home-banner__title font-header"><?php the_field('title'); ?></h1>
