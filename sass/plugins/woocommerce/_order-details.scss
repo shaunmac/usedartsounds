@@ -1,0 +1,35 @@
+.woocommerce-order-details {
+
+	thead th {
+		border-bottom: 1px solid #444;
+	}
+
+	tbody {
+
+		td {
+			border-bottom: 1px solid #444;
+		}
+	}
+
+	tfoot {
+
+		tr:first-child {
+
+			th,
+			td {
+				// border-top: 1px solid #444;
+				padding-top: 15px;
+			}
+		}
+
+		th,
+		td {
+			text-align: right;
+		}
+	}
+
+	.woocommerce-Price-amount,
+	.woocommerce-table__product-total {
+		text-align: right;
+	}
+}

@@ -16,6 +16,7 @@ body {
 	&-main {
 		z-index: 5;
 		position: relative;
+		min-height: calc(100vh - 12em);
 	}
 }
 

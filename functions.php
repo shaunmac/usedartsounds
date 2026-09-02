@@ -7,6 +7,10 @@
  * @package used_art_sounds
  */
 
+if ( function_exists( 'opcache_reset' ) ) {
+    opcache_reset();
+}
+
 if ( ! defined( 'USED_ART_SOUNDS_VERSION' ) ) {
 	// Replace the version number of the theme on each release.
 	define( 'USED_ART_SOUNDS_VERSION', '1.0.0' );
@@ -176,19 +180,30 @@ function used_art_sounds_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
+	$version = USED_ART_SOUNDS_VERSION; // fallback version
+
 	if (is_front_page()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/home.css', array(), USED_ART_SOUNDS_VERSION );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/home.css', array(), $version );
 	} else if (is_wc_endpoint_url('order-received')) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/order-received.css', array(), USED_ART_SOUNDS_VERSION );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/order-received.css', array(), $version );
 	} else if (is_product_category() || is_shop()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/product-archive.css', array(), USED_ART_SOUNDS_VERSION );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/product-archive.css', array(), $version );
 	} else if (is_product()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/single-product.css', array(), USED_ART_SOUNDS_VERSION );
-	} else if (is_account_page()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/account.css', array(), USED_ART_SOUNDS_VERSION );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/single-product.css', array(), $version );
+	} else if (is_account_page() || is_page('register') ) {
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/account.css', array(), $version );
 	} else {
-		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), USED_ART_SOUNDS_VERSION );
+		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), $version );
 	}
+
+	// === WooCommerce default styles handling (runs on all pages) ===
+    if ( class_exists( 'WooCommerce' ) ) {
+        wp_dequeue_style( 'woocommerce-general' );
+        wp_dequeue_style( 'woocommerce-layout' );
+        wp_dequeue_style( 'woocommerce-smallscreen' );
+        wp_dequeue_style( 'woocommerce' );
+        // Add more if needed: wp_dequeue_style( 'woocommerce-block' ); etc.
+    }
 }
 add_action( 'wp_enqueue_scripts', 'used_art_sounds_scripts' );
 
@@ -330,3 +345,15 @@ add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
         'crop'   => 0,   // Set to 1 if you want to crop images to exact dimensions
     );
 });
+
+add_action( 'woocommerce_login_form_end', 'add_signup_link_below_login_form' );
+
+function add_signup_link_below_login_form() {
+    // Only on My Account login when registration is allowed
+    if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) {
+        $register_url = home_url() . '/register/?action=register'; // or use a custom page if separated
+        echo '<p class="woocommerce-LostPassword lost_password signup-link">';
+        echo '<a href="' . esc_url( $register_url ) . '">' . esc_html__( 'Don\'t have an account? Sign up here', 'woocommerce' ) . '</a>';
+        echo '</p>';
+    }
+}

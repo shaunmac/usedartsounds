@@ -1120,3 +1120,15 @@ $wc-bp-lg: 1024px;
 	display: table;
 	clear: both;
 }
+
+.woocommerce-register {
+
+	.registration-form > h2:first-of-type {
+		display: none;
+	}
+
+	.content-wrapper {
+		max-width: 480px;
+	}
+}
+
