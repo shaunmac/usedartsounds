@@ -70,7 +70,7 @@ $wc-bp-lg: 1024px;
 	box-shadow: $wc-ring;
 }
 
-@mixin wc-card {
+@mixin wc-card-full {
 	background: $wc-white;
 	border: 1px solid $wc-slate-200;
 	border-radius: $wc-radius-xl;
@@ -198,7 +198,7 @@ $wc-bp-lg: 1024px;
 // Navigation
 // ---------------------------------------------------------------------------
 .woocommerce-MyAccount-navigation {
-	@include wc-card;
+	@include wc-card-full;
 	padding: $wc-space-3;
 	margin-bottom: $wc-space-6;
 
@@ -328,7 +328,7 @@ $wc-bp-lg: 1024px;
 // Content panel
 // ---------------------------------------------------------------------------
 .woocommerce-MyAccount-content {
-	@include wc-card;
+	@include wc-card-full;
 	padding: $wc-space-6 $wc-space-6 $wc-space-8;
 	color: $wc-slate-700;
 	font-size: $wc-text-base;
@@ -719,7 +719,7 @@ $wc-bp-lg: 1024px;
 		}
 
 		li {
-			@include wc-card;
+			@include wc-card-full;
 			padding: $wc-space-4;
 			margin: 0;
 			font-size: $wc-text-sm;
@@ -745,7 +745,7 @@ $wc-bp-lg: 1024px;
 	}
 
 	address {
-		@include wc-card;
+		@include wc-card-full;
 		padding: $wc-space-5;
 		font-style: normal;
 		line-height: 1.6;
@@ -768,7 +768,7 @@ $wc-bp-lg: 1024px;
 }
 
 .woocommerce-Address {
-	@include wc-card;
+	@include wc-card-full;
 	padding: $wc-space-5;
 	background: $wc-slate-50;
 	min-height: 100%;
@@ -836,7 +836,7 @@ $wc-bp-lg: 1024px;
 	padding: 0;
 
 	li {
-		@include wc-card;
+		@include wc-card-full;
 		padding: $wc-space-4 $wc-space-5;
 		margin-bottom: $wc-space-3;
 		display: flex;
@@ -1014,23 +1014,29 @@ $wc-bp-lg: 1024px;
 .woocommerce-account:not(.logged-in) {
 
 	.woocommerce {
-		display: block;
-		max-width: 52rem;
+		width: 100%;
+		margin-bottom: 75px;
 	}
 
 	.u-columns {
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: $wc-space-6;
+		border-radius: 0.75rem;
+		overflow: hidden;
 
 		@media (min-width: $wc-bp-md) {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+			background-image: url("http://usedartsounds.local/wp-content/uploads/2026/09/grok-image-96f3c2e1-0d86-46c7-9d87-468700b9b206.jpg");
+			background-position: right;
+			background-repeat: no-repeat;
+			background-size: calc(100% + 86px);
 		}
 	}
 
 	.u-column1,
 	.u-column2 {
-		@include wc-card;
+		@include wc-card-full;
 		padding: $wc-space-6;
 
 		h2 {
