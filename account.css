@@ -1637,7 +1637,7 @@ input[type="checkbox"]:checked ~ span::before {
 }
 
 @media (min-width: 1024px) {
-	.woocommerce-account .woocommerce {
+	.woocommerce-account.woocommerce-account:not(.logged-in).woocommerce {
 		display: grid;
 		grid-template-columns: 16.5rem minmax(0, 1fr);
 		gap: 2rem;
@@ -1726,8 +1726,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-MyAccount-navigation {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem;
 	padding: 0.75rem;
 	margin-bottom: 1.5rem;
 }
@@ -1857,8 +1857,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-MyAccount-content {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem;
 	padding: 1.5rem 1.5rem 2rem;
 	color: #334155;
 	font-size: 1rem;
@@ -2323,8 +2323,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-customer-details .woocommerce-order-overview--thankyou-order li {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem;
 	padding: 1rem;
 	margin: 0;
 	font-size: 0.875rem;
@@ -2364,8 +2364,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-customer-details address {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem;
 	padding: 1.25rem;
 	font-style: normal;
 	line-height: 1.6;
@@ -2389,8 +2389,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-Address {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem;
 	padding: 1.25rem;
 	background: #f8fafc;
 	min-height: 100%;
@@ -2471,8 +2471,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-SavedPaymentMethods li {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem;
 	padding: 1rem 1.25rem;
 	margin-bottom: 0.75rem;
 	display: flex;
@@ -2672,15 +2672,18 @@ input[type="checkbox"]:checked ~ span::before {
 	gap: 1.5rem;
 	border-radius: 0.75rem;
 	overflow: hidden;
+	background-image: url("http://usedartsounds.local/wp-content/uploads/2026/09/grok-image-96f3c2e1-0d86-46c7-9d87-468700b9b206.jpg");
+	background-repeat: no-repeat;
+	background-size: calc(100% + 85px);
+	padding-bottom: 55%;
+	background-position: bottom;
 }
 
 @media (min-width: 768px) {
 	.woocommerce-account:not(.logged-in) .u-columns {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
-		background-image: url("http://usedartsounds.local/wp-content/uploads/2026/09/grok-image-96f3c2e1-0d86-46c7-9d87-468700b9b206.jpg");
+		padding-bottom: 0;
 		background-position: right;
-		background-repeat: no-repeat;
-		background-size: calc(100% + 86px);
 	}
 }
 
@@ -2688,8 +2691,8 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-account:not(.logged-in) .u-column2 {
 	background: #ffffff;
 	border: 1px solid #e2e8f0;
-	border-radius: 0.75rem;
 	box-shadow: 0 1px 2px 0 #0f17ff;
+	border-radius: 0.75rem 0.75rem 0 0;
 	padding: 1.5rem;
 }
 
@@ -2724,6 +2727,62 @@ input[type="checkbox"]:checked ~ span::before {
 .woocommerce-account:not(.logged-in) form.login,
 .woocommerce-account:not(.logged-in) form.register {
 	max-width: none;
+}
+
+.woocommerce-account:not(.logged-in).woocommerce-register .registration-form {
+	width: 100%;
+	position: relative;
+	padding-bottom: 200px;
+}
+
+.woocommerce-account:not(.logged-in).woocommerce-register .registration-form::after {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 200px;
+	background-image: url("http://usedartsounds.local/wp-content/uploads/2026/09/grok-image-dbefe392-332c-4acd-b9dc-ba17c03544e4.jpg");
+	background-size: cover;
+	background-position: center right;
+	background-repeat: no-repeat;
+	border-radius: 0 0 0.75em 0.75em;
+}
+
+@media (min-width: 768px) {
+	.woocommerce-account:not(.logged-in).woocommerce-register .registration-form::after {
+		width: 60%;
+		border-radius: 0 0.75em 0.75em 0;
+		bottom: unset;
+		right: 0;
+		top: 0;
+		height: 432px;
+		background-size: cover;
+		background-position: 0 110%;
+	}
+}
+
+.woocommerce-account:not(.logged-in).woocommerce-register form.register {
+	background: #fff;
+	padding: 1.5em;
+	width: 100%;
+	border-radius: 0.75em 0.75em 0 0;
+}
+
+@media (min-width: 768px) {
+	.woocommerce-account:not(.logged-in).woocommerce-register form.register {
+		border-radius: 0.75em 0 0 0.75em;
+		width: 40%;
+	}
+}
+
+@media (min-width: 768px) {
+	.woocommerce-account:not(.logged-in) .u-column1,
+	.woocommerce-account:not(.logged-in) .u-column2 {
+		background: #ffffff;
+		border: 1px solid #e2e8f0;
+		box-shadow: 0 1px 2px 0 #0f17ff;
+		border-radius: 0.75rem 0 0 0.75rem;
+	}
 }
 
 .woocommerce-MyAccount-downloads .woocommerce-MyAccount-downloads-file::before {
@@ -2767,10 +2826,6 @@ input[type="checkbox"]:checked ~ span::before {
 
 .woocommerce-register .registration-form > h2:first-of-type {
 	display: none;
-}
-
-.woocommerce-register .content-wrapper {
-	max-width: 480px;
 }
 
 /* Accessibility
