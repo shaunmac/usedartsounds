@@ -351,9 +351,23 @@ add_action( 'woocommerce_login_form_end', 'add_signup_link_below_login_form' );
 function add_signup_link_below_login_form() {
     // Only on My Account login when registration is allowed
     if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) {
-        $register_url = home_url() . '/register/?action=register'; // or use a custom page if separated
+        $register_url = home_url() . '/register'; // or use a custom page if separated
         echo '<p class="woocommerce-LostPassword lost_password signup-link">';
-        echo '<a href="' . esc_url( $register_url ) . '">' . esc_html__( 'Don\'t have an account? Sign up here', 'woocommerce' ) . '</a>';
+        echo '<a href="' . esc_url( $register_url ) . '">' . esc_html__( 'Don\'t have an account? Register here', 'woocommerce' ) . '</a>';
         echo '</p>';
     }
 }
+
+add_filter( 'login_url', function( $login_url, $redirect = '' ) {
+	if ( ! function_exists( 'wc_get_page_permalink' ) ) {
+		return $login_url;
+	}
+
+	$my_account = wc_get_page_permalink( 'myaccount' );
+
+	if ( $redirect ) {
+		$my_account = add_query_arg( 'redirect_to', rawurlencode( $redirect ), $my_account );
+	}
+
+	return $my_account;
+}, 10, 2 );
