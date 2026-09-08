@@ -371,3 +371,21 @@ add_filter( 'login_url', function( $login_url, $redirect = '' ) {
 
 	return $my_account;
 }, 10, 2 );
+
+/**
+ * Preview WooCommerce notice types on My Account for CSS work.
+ * Visit: /my-account/?preview_notices=1
+ */
+add_action( 'template_redirect', function () {
+	if ( ! is_account_page() || empty( $_GET['preview_notices'] ) ) {
+		return;
+	}
+
+	if ( ! function_exists( 'wc_add_notice' ) ) {
+		return;
+	}
+
+	wc_add_notice( 'Success sample — account updated.', 'success' );
+	wc_add_notice( 'Info sample — something you should know.', 'notice' );
+	wc_add_notice( 'Error sample — that action could not be completed.', 'error' );
+} );

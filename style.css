@@ -534,7 +534,7 @@ body .is-layout-flex {
 .site-main {
 	z-index: 5;
 	position: relative;
-	min-height: calc(100vh - 12em);
+	min-height: calc(100vh - 10em);
 }
 
 .font-header {
