@@ -1,3 +1,9 @@
+.woocommerce-checkout .wc-block-components-button {
+	background-color: $color__primary;
+	border-radius: 0.75em;
+	padding: 16px 0;
+}
+
 @media screen and (min-width: 768px) {
 
 	.col2-set {

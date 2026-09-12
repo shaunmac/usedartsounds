@@ -1,154 +1,147 @@
+@media screen and (max-width: 733px) {
 
-/* ==================== MOBILE-FIRST ==================== */
+	.wc-block-components-sidebar-layout .wc-block-components-sidebar {
+		margin-top: 16px;
+	}
 
-/* Make the image row full-width on mobile */
+	.wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+		font-size: 1.2em;
+	}
 
-table.wc-block-cart-items {
-
-	.wc-block-cart-items {
-
-		.is-small &__row,
-		.is-mobile &__row {
-			display: block;
-
-			/* Break the table into blocks */
-			margin-bottom: 0;
-			border-bottom: 1px solid #ddd;
-			padding-bottom: 20px;
-		}
-
-		&__header th {
-			font-weight: 900;
-		}
+	table.wc-block-cart-items .wc-block-cart-items__header .wc-block-cart-items__header-product {
+		width: 78%;
+		text-align: left;
+		padding-left: 16px;
 	}
 }
 
-table.wc-block-cart-items td.wc-block-cart-item {
+@media screen and (min-width: 734px) {
 
-	&__total {
-		margin-top: 1em;
-		padding-top: 1em;
-		position: relative;
+	table.wc-block-cart-items .wc-block-cart-items__header .wc-block-cart-items__header-image span {
+		padding-left: 16px;
 	}
 }
 
-@media (max-width: 767px) {
+.wc-block-cart .wc-block-components-sidebar .wc-block-cart__totals-title {
+	display: block;
+	margin-left: 16px;
+	font-weight: 900;
+}
 
-	.wc-block-components-sidebar.wc-block-cart__sidebar {
-		padding-top: 15px;
+table.wc-block-cart-items .wc-block-cart-items__header th,
+table.wc-block-cart-items .wc-block-cart-items__row .wc-block-components-product-name {
+	font-size: 1.2em;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+.wc-block-components-sidebar-layout .wc-block-components-main {
+	padding-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+	.wp-block-woocommerce-cart-order-summary-block .wc-block-components-totals-wrapper {
+		padding-left: 16px;
+		padding-right: 16px;
 	}
 
-	.wc-block-cart-item__total-price-and-sale-badge-wrapper {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-		align-items: normal;
-		width: 100%;
-
-		&::after {
-			display: block;
-			content: "Total";
-			width: 46px;
-			font-weight: 600;
-		}
+	.wc-block-components-totals-footer-item .wc-block-components-totals-item__label {
+		font-size: 1.2em;
 	}
 }
 
-.wc-block-cart-item {
+table.wc-block-cart-items .wc-block-cart-items__header .wc-block-cart-items__header-total {
+	text-align: left;
+	padding-left: 16px;
+}
 
-	/* Image on top - full width */
-	&__image {
-		// width: calc(50% - 15px) !important;
-		padding: 0 15px 0 15px !important;
-		margin-bottom: 15px;
-		text-align: center;
-		display: block;
+.is-medium table.wc-block-cart-items .wc-block-cart-items__header {
+	display: block;
+}
 
-		a {
-			width: 100%;
-			display: block;
-		}
+table.wc-block-cart-items .wc-block-cart-items__header .wc-block-cart-items__header-product {
+	visibility: visible;
+	text-align: left;
+	padding-left: 16px;
+}
 
-		img {
-			width: 100% !important;
-			max-width: 100% !important;
-			height: auto !important;
-			object-fit: contain;
-			overflow: hidden;
-			border-radius: 5px;
-		}
-	}
+.wc-block-components-product-metadata .wc-block-components-product-metadata__description > p {
+	margin: 16px 0;
+}
 
-	/* Other cells stack below */
-	&__product {
-		display: block !important;
-		width: calc(50% - 30px) !important;
-		padding: 0 15px !important;
+@media screen and (max-width: 480px) {
 
-		.wc-block-cart-item__wrap {
+	.wc-block-cart {
+
+		&.is-medium table.wc-block-cart-items .wc-block-cart-items__row,
+		&.is-mobile table.wc-block-cart-items .wc-block-cart-items__row,
+		&.is-small table.wc-block-cart-items .wc-block-cart-items__row {
 			display: flex;
-			justify-content: space-between;
-			align-items: center;
+			flex-direction: column;
 
-			.wc-block-components-product-name {
-				font-size: 1.2rem;
-				font-weight: 900;
+			&:last-of-type .wc-block-cart-item__total {
+				border-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			.wc-block-cart-item {
+
+				&__product {
+					padding: 0 16px;
+
+					.wc-block-components-product-name {
+						font-size: 1.5rem;
+						font-weight: 900;
+						text-decoration: none;
+						line-height: 1;
+					}
+				}
+
+				&__total {
+					margin-top: 1.5em;
+					padding: 1em 16px;
+					position: relative;
+					border-top: 2px solid #d1d1d1;
+					border-bottom: 2px solid #d1d1d1;
+
+					&::after {
+						content: "totoal";
+						width: 2em;
+						height: 1em;
+						position: absolute;
+						left: 16px;
+					}
+				}
+
+				&__quantity {
+					width: 100%;
+				}
 			}
 		}
 	}
 
-	.is-small table.wc-block-cart-items .wc-block-cart-items__row &__quantity {
-		position: relative;
-		padding-right: 0;
+	table.wc-block-cart-items {
 
-		.wc-block-cart-item__remove-link {
-			position: absolute;
-			bottom: 0;
-			right: -100%;
+		.wc-block-cart-items {
+
+			&__row .wc-block-cart-item__prices {
+				width: 100%;
+				flex-direction: row-reverse;
+				margin-top: -2.2em;
+
+				.wc-block-components-formatted-money-amount {
+					background-color: #fff;
+					border-radius: 1em;
+					border: 4px solid #fff;
+					position: relative;
+					z-index: 999;
+				}
+			}
 		}
 	}
 
-	table.wc-block-cart-items &__total {
-		border-top: 1px solid #dfdfdf;
-	}
-}
-
-/* ==================== TABLET & DESKTOP ==================== */
-@media (min-width: 768px) {
-
-	table.wc-block-cart-items .wc-block-cart-items__row {
-		display: table-row !important;
-	}
-
-	.wc-block-cart-item__image {
-		width: auto !important;
-		max-width: 200px !important;
-		padding: 10px !important;
-		vertical-align: top;
-		margin-bottom: 0;
-	}
-
-	.wc-block-cart-item__image img {
-		width: 100% !important;
-		max-width: 200px !important;
-		height: auto !important;
-	}
-
-	.wc-block-cart-item__product,
-	.wc-block-cart-item__total {
-		display: table-cell !important;
-		vertical-align: top;
-	}
-
-	.wc-block-cart-item__total {
-		display: table-cell !important;
-	}
-
-	.wc-block-cart-items__header-image > span {
-		margin-left: 1em;
-	}
-
-	.woocommerce-cart .wp-block-woocommerce-cart-order-summary-block {
-		padding: 0 1em;
+	.wc-block-components-quantity-selector {
+		width: 100%;
 	}
 }

@@ -388,4 +388,5 @@ add_action( 'template_redirect', function () {
 	wc_add_notice( 'Success sample — account updated.', 'success' );
 	wc_add_notice( 'Info sample — something you should know.', 'notice' );
 	wc_add_notice( 'Error sample — that action could not be completed.', 'error' );
+	wc_add_notice( 'Confirm your email address to check for past orders and linek them to your account. <a href="#" class="button wc-forward">Confirm Email</a>', 'notice');
 } );

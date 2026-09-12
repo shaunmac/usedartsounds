@@ -451,13 +451,15 @@ p.no-comments {
 	background-color: $color__primary;
 	text-decoration: none;
 	color: $color__background-body;
-	border-radius: 3px;
+	border-radius: 0.75em;
+	position: relative;
+	top: 0;
 
 	&:hover,
 	&:hover:visited {
-		background-color: $color__background-body;
-		border: 2px solid $color__primary;
-		color: $color__primary;
+		border-bottom: 2px solid darken($color__primary, 10%);
+		transform: translateY(-2px);
+		color: #fff;
 	}
 
 	&:visited {
@@ -469,8 +471,8 @@ p.no-comments {
 
 	table.wc-block-cart-items,
 	.wp-block-woocommerce-cart-order-summary-block {
-		border: 2px solid $color__gray;
-		border-radius: 3px;
+		border: 2px solid darken($color__gray, 10%);
+		border-radius: 0.75em;
 	}
 }
 
@@ -480,8 +482,8 @@ table.wc-block-cart-items .wc-block-cart-items__row td.wc-block-cart-item__quant
 }
 
 div.wc-block-components-totals-wrapper {
-	padding-left: 1em;
-	padding-right: 1em;
+	padding-left: 16px;
+	padding-right: 16px;
 
 	@include breakpoint(md) {
 		padding-left: 0;
@@ -493,23 +495,19 @@ table.wc-block-cart-items {
 
 	.wc-block-cart-items__row {
 
-		&:not(:last-child) td {
-			border-bottom: 1px solid $color__gray;
-			padding-bottom: 1em;
+		.is-small &:not(:last-child) td {
+			border-bottom: 1px solid darken($color__gray, 10%);
+			padding-bottom: 32px;
 		}
 
 		.wc-block-cart-item {
 
 			&__image {
-				padding-left: 1em;
-
-				@include breakpoint(lg) {
-					padding-left: 0;
-				}
+				padding-left: 16px;
 			}
 
 			&__total {
-				padding-right: 1rem;
+				padding-right: 16px;
 			}
 		}
 	}
