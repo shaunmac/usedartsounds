@@ -1,0 +1,169 @@
+// Import variables and mixins.
+@import "abstracts/abstracts";
+
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+
+/* Normalize
+--------------------------------------------- */
+@import "generic/normalize";
+
+/* Box sizing
+--------------------------------------------- */
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/base";
+
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
+// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+@import "layouts/header";
+@import "layouts/search";
+@import "layouts/footer";
+@import "components/navigation/navigation";
+
+/* Accessibility
+--------------------------------------------- */
+@import "utilities/accessibility";
+// ------------------------------------------------------------------
+// 404 — Tailwind-style component
+// Markup: .error-404 > .page-content > .error-404__colums
+//         > img.error-404__image + .error-404__content
+// ------------------------------------------------------------------
+
+$error-404-bg: #f3f0ee;
+$error-404-ink: #1a1a1a;
+$error-404-muted: #5a5a5a;
+$error-404-accent: #728cc4;
+$error-404-card: #fff;
+$error-404-radius: 1.25rem; // rounded-2xl
+$error-404-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.22); // shadow-xl
+$error-404-max: 72rem; // max-w-6xl
+$error-404-bp: 768px;
+
+.error-404.not-found {
+	background: $error-404-bg;
+	padding-block: clamp(2.5rem, 6vw, 5rem);
+
+	.page-content {
+		max-width: $error-404-max;
+		margin-inline: auto;
+	}
+
+	// Hide leftover WP 404 widgets
+	.widget-area,
+	.widget {
+		display: none;
+	}
+}
+
+// Two-column shell — flex-col md:flex-row items-center gap-10
+.error-404__colums {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 2.5rem;
+
+	@media (min-width: $error-404-bp) {
+		flex-direction: row;
+		align-items: center;
+		gap: 4rem; // gap-16
+		min-height: 28rem;
+	}
+}
+
+// Image — rounded-2xl object-cover shadow-xl
+.error-404__image {
+	display: block;
+	width: 100%;
+	max-width: 32rem;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+	object-position: center;
+	border-radius: $error-404-radius;
+	box-shadow: $error-404-shadow;
+	background: #e8e3de;
+
+	@media (min-width: $error-404-bp) {
+		flex: 0 1 46%;
+		width: 46%;
+		max-width: none;
+		aspect-ratio: 1 / 1;
+	}
+}
+
+// Copy column
+.error-404__content {
+	flex: 1 1 auto;
+	width: 100%;
+	max-width: 36rem; // max-w-xl
+	text-align: center;
+
+	@media (min-width: $error-404-bp) {
+		text-align: left;
+	}
+}
+
+.error-404__page-title {
+	margin: 0 0 1rem;
+	font-family: nippori, fira-sans, system-ui, sans-serif;
+	font-size: clamp(1.875rem, calc(2.4vw + 1rem), 3rem); // text-3xl → text-5xl
+	font-weight: 700;
+	line-height: 1.1;
+	letter-spacing: -0.025em; // tracking-tight
+	color: $error-404-ink;
+}
+
+.error-404__page-s-title {
+	margin: 0;
+	font-family: fira-sans, system-ui, sans-serif;
+	font-size: 1.0625rem;
+	line-height: 1.7;
+	color: $error-404-muted;
+}
+
+// Optional card variant — add .error-404--card on the <section>
+.error-404--card {
+
+	.error-404__colums {
+		background: $error-404-card;
+		border-radius: $error-404-radius;
+		box-shadow: $error-404-shadow;
+		padding: 1.5rem;
+		overflow: hidden;
+
+		@media (min-width: $error-404-bp) {
+			padding: 0;
+		}
+	}
+
+	.error-404__image {
+
+		@media (min-width: $error-404-bp) {
+			border-radius: $error-404-radius 0 0 $error-404-radius;
+			box-shadow: none;
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	.error-404__content {
+
+		@media (min-width: $error-404-bp) {
+			padding: 3rem 3rem 3rem 0;
+		}
+	}
+}
+
+.error-404__products {
+	margin-bottom: 3em;
+}
+
+.error-404__products-title {
+	font-family: nippori, fira-sans, system-ui, sans-serif;
+}

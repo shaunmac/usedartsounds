@@ -8,52 +8,51 @@
  */
 
 get_header();
+
 ?>
 
 	<main id="primary" class="site-main">
-
+	<div class="content-wrapper">
 		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'usedartsounds' ); ?></h1>
-			</header><!-- .page-header -->
 
 			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'usedartsounds' ); ?></p>
 
-					<?php
-					get_search_form();
 
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
 
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'usedartsounds' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
 
-					<?php
-					/* translators: %1$s: smiley */
-					$used_art_sounds_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'usedartsounds' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$used_art_sounds_archive_content" );
+				<div class="error-404__colums">
+					<!-- Image Wrapper -->
+					<img class="error-404__image" src="https://usedartsounds.com/wp-content/uploads/2026/09/404.jpg" alt="Product Image">
+					
+					<!-- Content Wrapper -->
+					<div class="error-404__content">
+						<h1 class="error-404__page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'usedartsounds' ); ?></h1>
+						<p class="error-404__page-s-title"><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'usedartsounds' ); ?></p>
+					</div>
 
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
+				</div>
+
+				
+
+					
 
 			</div><!-- .page-content -->
 		</section><!-- .error-404 -->
 
+		<?php if ( class_exists( 'WooCommerce' ) ) : ?>
+	<section class="error-404__products">
+		<h2 class="error-404__products-title">
+			<?php esc_html_e( 'Shop the collection', 'usedartsounds' ); ?>
+		</h2>
+
+		<?php
+		echo do_shortcode(
+			'[products limit="4" columns="4" orderby="popularity" visibility="visible"]'
+		);
+		?>
+	</section>
+<?php endif; ?>
+	</div>
 	</main><!-- #main -->
 
 <?php

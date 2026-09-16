@@ -192,6 +192,8 @@ function used_art_sounds_scripts() {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/single-product.css', array(), $version );
 	} else if (is_account_page() || is_page('register') ) {
 		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/account.css', array(), $version );
+	} else if (is_404()) {
+		wp_enqueue_style( 'usedartsounds-style', get_template_directory_uri() . '/error-404.css', array(), $version);
 	} else {
 		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), $version );
 	}
@@ -204,6 +206,7 @@ function used_art_sounds_scripts() {
         wp_dequeue_style( 'woocommerce' );
         // Add more if needed: wp_dequeue_style( 'woocommerce-block' ); etc.
     }
+
 }
 add_action( 'wp_enqueue_scripts', 'used_art_sounds_scripts' );
 
