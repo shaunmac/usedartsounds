@@ -12,34 +12,6 @@
 // Tokens (Tailwind-like scale)
 // ---------------------------------------------------------------------------
 
-$wc-primary: #718bc3;
-$wc-primary-dark: #5a73ab;
-$wc-primary-soft: rgba(113, 139, 195, 0.12);
-$wc-secondary: #c3a972;
-$wc-secondary-dark: #a89055;
-$wc-secondary-soft: rgba(195, 169, 114, 0.16);
-
-$wc-slate-50: #f8fafc;
-$wc-slate-100: #f1f5f9;
-$wc-slate-200: #e2e8f0;
-$wc-slate-300: #cbd5e1;
-$wc-slate-400: #94a3b8;
-$wc-slate-500: #64748b;
-$wc-slate-600: #475569;
-$wc-slate-700: #334155;
-$wc-slate-800: #1e293b;
-$wc-slate-900: #0f172a;
-
-$wc-success: #16a34a;
-$wc-success-soft: #dcfce7;
-$wc-warning: #d97706;
-$wc-warning-soft: #fef3c7;
-$wc-danger: #dc2626;
-$wc-danger-soft: #fee2e2;
-$wc-info: $wc-primary;
-$wc-info-soft: $wc-primary-soft;
-
-$wc-white: #fff;
 $wc-radius-sm: 0.375rem; // rounded
 $wc-radius: 0.5rem; // rounded-lg
 $wc-radius-xl: 0.75rem; // rounded-xl
