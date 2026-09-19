@@ -43,7 +43,7 @@ add_action( 'after_setup_theme', 'used_art_sounds_woocommerce_setup' );
  * @return void
  */
 function used_art_sounds_woocommerce_scripts() {
-	wp_enqueue_style( 'used-art-sounds-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), USED_ART_SOUNDS_VERSION );
+	wp_enqueue_style( 'used-art-sounds-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css', array(), USED_ART_SOUNDS_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {

@@ -183,19 +183,19 @@ function used_art_sounds_scripts() {
 	$version = USED_ART_SOUNDS_VERSION; // fallback version
 
 	if (is_front_page()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/home.css', array(), $version );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/css/home.css', array(), $version );
 	} else if (is_wc_endpoint_url('order-received')) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/order-received.css', array(), $version );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/css/order-received.css', array(), $version );
 	} else if (is_product_category() || is_shop()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/product-archive.css', array(), $version );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/css/product-archive.css', array(), $version );
 	} else if (is_product()) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/single-product.css', array(), $version );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/css/single-product.css', array(), $version );
 	} else if (is_account_page() || is_page('register') ) {
-		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/account.css', array(), $version );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri().'/css/account.css', array(), $version );
 	} else if (is_404()) {
-		wp_enqueue_style( 'usedartsounds-style', get_template_directory_uri() . '/error-404.css', array(), $version);
+		wp_enqueue_style( 'usedartsounds-style', get_template_directory_uri() . '/css/error-404.css', array(), $version);
 	} else {
-		wp_enqueue_style( 'used-art-sounds-style', get_stylesheet_uri(), array(), $version );
+		wp_enqueue_style( 'used-art-sounds-style', get_template_directory_uri() . '/css/style.css', array(), $version );
 	}
 
 	// === WooCommerce default styles handling (runs on all pages) ===

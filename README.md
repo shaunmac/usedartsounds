@@ -15,7 +15,7 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 * A script at `js/navigation.js` that makes your menu a toggled dropdown on small screens (like your phone), ready for CSS artistry. It's enqueued in `functions.php`.
 * 2 sample layouts in `sass/layouts/` made using CSS Grid for a sidebar on either side of your content. Just uncomment the layout of your choice in `sass/style.scss`.
 Note: `.no-sidebar` styles are automatically loaded.
-* Smartly organized starter CSS in `style.css` that will help you to quickly get your design off the ground.
+* Smartly organized starter CSS in `css/style.css` that will help you to quickly get your design off the ground.
 * Full support for `WooCommerce plugin` integration with hooks in `inc/woocommerce.php`, styling override woocommerce.css with product gallery features (zoom, swipe, lightbox) enabled.
 * Licensed under GPLv2 or later. :) Use it to make something cool.
 
@@ -35,12 +35,12 @@ Clone or download this repository, change its name to something else (like, say,
 
 1. Search for `'usedartsounds'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
 2. Search for `used_art_sounds` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain:used_art_sounds` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
+3. Search for `Text Domain:used_art_sounds` in `css/style.css` and replace with: `Text Domain: megatherium-is-awesome`.
 4. Search for <code>&nbsp;_s</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
 5. Search for `used-art-sounds-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
 6. Search for `used_art_sounds` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+Then, update the stylesheet header in `css/style.css`, the links in `footer.php` with your own information and rename `_s.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
 ### Setup
 
