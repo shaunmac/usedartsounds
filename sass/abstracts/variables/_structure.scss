@@ -1,2 +1,33 @@
 $size__site-main: 100%;
 $size__site-sidebar: 25%;
+
+// WooCommerce account structure.
+$wc-radius-sm: 0.375rem; // rounded
+$wc-radius: 0.5rem; // rounded-lg
+$wc-radius-xl: 0.75rem; // rounded-xl
+$wc-radius-xl-left: 0.75rem 0 0 0.75rem;
+$wc-radius-xl-top: 0.75rem 0.75rem 0 0;
+$wc-shadow-sm: 0 1px 2px 0 $wc-slate-800;
+$wc-shadow: 0 1px 3px 0 $wc-slate-800, 0 1px 2px -1px $wc-slate-800;
+$wc-shadow-md: 0 4px 6px -1px $wc-slate-800, 0 2px 4px -2px rgb(15, 23, 42 / 0.06);
+$wc-ring: 0 0 0 3px rgba(113, 139, 195, 0.28);
+
+$wc-space-1: 0.25rem;
+$wc-space-2: 0.5rem;
+$wc-space-3: 0.75rem;
+$wc-space-4: 1rem;
+$wc-space-5: 1.25rem;
+$wc-space-6: 1.5rem;
+$wc-space-8: 2rem;
+$wc-space-10: 2.5rem;
+
+$wc-text-sm: 0.875rem;
+$wc-text-base: 1rem;
+$wc-text-lg: 1.125rem;
+$wc-text-xl: 1.25rem;
+$wc-text-2xl: 1.5rem;
+
+$wc-bp-md: 768px;
+$wc-bp-lg: 1024px;
+
+$wc-content-w-d: calc(70% - $wc-space-8 * 2);
