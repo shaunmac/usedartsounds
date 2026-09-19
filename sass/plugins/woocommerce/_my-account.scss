@@ -42,45 +42,6 @@ $wc-bp-lg: 1024px;
 
 $wc-content-w-d: calc(70% - $wc-space-8 * 2);
 
-@mixin wc-focus {
-	outline: none;
-	box-shadow: $wc-ring;
-}
-
-@mixin wc-card-full {
-	background: $wc-slate-50;
-	border: 1px solid $wc-slate-300;
-	border-radius: $wc-radius-xl;
-}
-
-@mixin wc-card-left {
-	background: $wc-slate-50;
-	border: 1px solid $wc-slate-300;
-	border-radius: $wc-radius-xl-left;
-}
-
-@mixin wc-card-top {
-	background: $wc-slate-50;
-	border: 1px solid $wc-slate-200;
-	border-radius: $wc-radius-xl-top;
-}
-
-@mixin wc-btn-reset {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	gap: $wc-space-2;
-	border: 1px solid transparent;
-	border-radius: $wc-radius;
-	font-size: $wc-text-sm;
-	font-weight: 600;
-	line-height: 1.25;
-	letter-spacing: 0.01em;
-	text-decoration: none;
-	cursor: pointer;
-	transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
-}
-
 // ---------------------------------------------------------------------------
 // Page shell
 // ---------------------------------------------------------------------------
