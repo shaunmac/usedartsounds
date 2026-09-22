@@ -1,3 +1,7 @@
+@use "../../abstracts/variables/columns" as *;
+@use "../../abstracts/variables/colors" as *;
+@use "../../abstracts/mixins/mixins" as *;
+
 .woocommerce-checkout .wc-block-components-button {
 	background-color: $color__primary;
 	border-radius: 0.75em;

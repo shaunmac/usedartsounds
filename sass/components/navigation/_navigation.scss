@@ -1,3 +1,6 @@
+@use "../../abstracts/mixins/mixins" as *;
+@use "../../abstracts/variables/colors" as *;
+
 .main-navigation {
 	display: block;
 	width: 100%;

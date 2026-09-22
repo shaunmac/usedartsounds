@@ -1,18 +1,20 @@
+@use "abstracts/variables/colors" as *;
+
+@use "layouts/header" as *;
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@use "abstracts/abstracts" as *;
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@use "generic/normalize" as *;
 
 /* Box sizing
 --------------------------------------------- */
-@import "generic/box-sizing";
-@import "base/base";
-@import "layouts/header";
-@import "layouts/search";
-@import "layouts/footer";
-@import "components/navigation/navigation";
+@use "generic/box-sizing" as *;
+@use "base/base" as *;
+@use "layouts/search" as *;
+@use "layouts/footer" as *;
+@use "components/navigation/navigation" as *;
 
 $borderVal : 2px solid $color__gray;
 

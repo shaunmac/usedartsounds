@@ -1,3 +1,8 @@
+@use "headings" as *;
+@use "copy" as *;
+@use "../../abstracts/variables/colors" as *;
+@use "../../abstracts/variables/typography" as *;
+
 body,
 button,
 input,
@@ -10,5 +15,4 @@ textarea {
 	line-height: $font__line-height-body;
 }
 
-@import "headings";
-@import "copy";
+

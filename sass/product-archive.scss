@@ -1,28 +1,29 @@
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@use "abstracts/abstracts" as *;
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@use "generic/normalize" as *;
 
 /* Box sizing
 --------------------------------------------- */
-@import "generic/box-sizing";
+@use "generic/box-sizing" as *;
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-@import "base/base";
-@import "layouts/header";
-@import "layouts/search";
-@import "layouts/footer";
-@import "components/navigation/navigation";
-@import "plugins/woocommerce/components";
+@use "base/base" as *;
+@use "layouts/header" as *;
+@use "layouts/search" as *;
+@use "layouts/footer" as *;
+@use "components/navigation/navigation" as *;
+@use "plugins/woocommerce/components" as *;
+@use "plugins/woocommerce/products" as *;
 
 /* Accessibility
 --------------------------------------------- */
-@import "utilities/accessibility";
+@use "utilities/accessibility" as *;
 
 /* Alignments
 --------------------------------------------- */
-@import "utilities/alignments";
+@use "utilities/alignments" as *;

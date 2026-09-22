@@ -1,8 +1,13 @@
+@use "../../abstracts/variables/typography" as *;
+@use "../../abstracts/variables/structure" as *;
+@use "../../abstracts/variables/colors" as *;
+@use "../../abstracts/mixins/mixins" as *;
+
 /**
  * WooCommerce My Account — Underscores (_s) partial
  * Drop into: sass/woocommerce/_account.scss
  * Import from sass/woocommerce.scss:
- *   @import "woocommerce/account";
+ *   @import "woocommerce/account" as *;
  *
  * Colors: primary #718bc3 · secondary #c3a972
  * Icons: Font Awesome Free (already enqueued)
@@ -748,6 +753,8 @@
 		}
 	}
 
+
+
 	address {
 		padding: $wc-space-5;
 		font-style: normal;
@@ -774,7 +781,6 @@
 
 .woocommerce-Address {
 	padding: $wc-space-5;
-	background: $wc-slate-50;
 	min-height: 100%;
 
 	@include wc-card-full;
@@ -786,6 +792,7 @@
 		gap: $wc-space-3;
 		margin-bottom: $wc-space-4;
 
+		h2,
 		h3,
 		title {
 			margin: 0;

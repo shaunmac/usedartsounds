@@ -1,3 +1,7 @@
+@use "../abstracts/mixins/mixins" as *;
+@use "../abstracts/variables/colors" as *;
+@use "sass:color";
+
 .site-footer {
 	background-color: $color__background-dark;
 	padding: 1.5em 1em 5em;
@@ -106,7 +110,7 @@
 
 		a {
 			font-size: 2em;
-			color: lighten($color__background-dark, 15%);
+			color: color.adjust($color__background-dark, $lightness: 15%);
 
 			span {
 				display: none;
@@ -158,8 +162,8 @@
 			display: block;
 			padding: 10px 1em;
 			border-radius: 0.5em;
-			background-color: darken($color__background-dark, 5%);
-			border: 2px solid darken($color__background-dark, 5%);
+			background-color: color.adjust($color__background-dark, $lightness: -5%);
+			border: 2px solid color.adjust($color__background-dark, $lightness: -5%);
 
 			&:hover {
 				border: 2px solid rgba($color__background-screen, 0.8);

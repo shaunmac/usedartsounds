@@ -1,3 +1,6 @@
+@use "../abstracts/variables/colors" as *;
+@use "../abstracts/mixins/mixins" as *;
+
 .top-header {
 	background-color: $color__background-dark;
 	padding: 0 1em;
@@ -89,6 +92,15 @@
 
 		@include breakpoint(lg) {
 			font-size: 1.2em;
+		}
+
+		&:focus,
+		&:visited,
+		&:hover,
+		&:target,
+		&:active,
+		&:focus-visible {
+			color: #2c2c2c;
 		}
 	}
 }

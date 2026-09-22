@@ -19,8 +19,8 @@
   "devDependencies": {
     "@wordpress/scripts": "^19.2.2",
     "dir-archiver": "^1.1.1",
-    "node-sass": "^7.0.1",
-    "rtlcss": "^3.5.0"
+    "rtlcss": "^3.5.0",
+    "sass": "^1.104.1"
   },
   "rtlcssConfig": {
     "options": {
@@ -36,15 +36,18 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass sass/ -o ./css --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./css && stylelint 'css/*.css' --fix || true && stylelint 'css/*.css' --fix",
-    "compress:css": "node-sass --output-style compressed sass/ -o ./css",
-    "compile:rtl": "rtlcss css/style.css css/style-rtl.css",
+    "compile:css": "sass sass/:assets/css/ --style=expanded --source-map",
+    "watch": "sass sass/:assets/css/ --watch --style=expanded --source-map",
+    "compress:css": "sass sass/:assets/css/ --style=compressed --no-source-map",
+    "compile:rtl": "rtlcss assets/css/style.css assets/css/style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
     "bundle": "dir-archiver --src . --dest ../usedartsounds.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map css/*.map yarn.lock"
   },
   "dependencies": {
     "animate.css": "^4.1.1"
+  },
+  "overrides": {
+    "chokidar": "3.6.0"
   }
 }

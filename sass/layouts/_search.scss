@@ -1,3 +1,6 @@
+@use "../abstracts/mixins/mixins" as *;
+@use "../abstracts/variables/colors" as *;
+
 #header-search {
 
 	@include breakpoint(md) {

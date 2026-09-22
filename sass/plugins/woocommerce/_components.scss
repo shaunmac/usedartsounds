@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "../../abstracts/variables/colors" as *;
+@use "../../abstracts/mixins/mixins" as *;
 /**
  * Header cart
  */
@@ -25,8 +28,8 @@
 	padding: 0.5em 1em 0.6em;
 	background-color: $color__background-dark;
 	border-radius: 3px;
-	border: 2px solid lighten($color__background-dark, 15%);
-	color: lighten($color__background-dark, 50%);
+	border: 2px solid color.adjust($color__background-dark, $lightness: 15%);
+	color: color.adjust($color__background-dark, $lightness: 50%);
 	font-size: 0.8rem;
 
 	a {
@@ -187,17 +190,17 @@ p.stars {
 		padding: 0 1em;
 		text-align: center;
 		display: flex;
-		border-bottom: 2px solid darken($color__gray, 10%);
+		border-bottom: 2px solid color.adjust($color__gray, $lightness: -10%);
 
 		li {
 			display: block;
 			position: relative;
 			margin: 0;
-			background-color: darken($color__gray, 10%);
+			background-color: color.adjust($color__gray, $lightness: -10%);
 			border-radius: 5px 5px 0 0;
-			border-top: 2px solid darken($color__gray, 10%);
-			border-right: 2px solid darken($color__gray, 10%);
-			border-left: 2px solid darken($color__gray, 10%);
+			border-top: 2px solid color.adjust($color__gray, $lightness: -10%);
+			border-right: 2px solid color.adjust($color__gray, $lightness: -10%);
+			border-left: 2px solid color.adjust($color__gray, $lightness: -10%);
 
 			&::after {
 				width: 100%;
@@ -306,12 +309,12 @@ p.stars {
 	position: relative;
 	line-height: 1;
 	font-size: 0.9em;
-	border: 2px solid darken($color__gray, 10%);
+	border: 2px solid color.adjust($color__gray, $lightness: -10%);
 	border-radius: 4px;
 	min-height: 50px;
 	display: flex;
 	align-items: center;
-	color: darken($color__gray, 30%);
+	color: color.adjust($color__gray, $lightness: -30%);
 	margin-bottom: 1.4em;
 
 	.button {
@@ -352,7 +355,7 @@ p.stars {
 	padding: 0.4em 1em 0.4em 2.5em;
 	margin: 0 0 1em 0;
 	list-style-type: none;
-	color: darken($color__gray, 30%);
+	color: color.adjust($color__gray, $lightness: -30%);
 
 	&::before {
 		width: 1em;
@@ -390,13 +393,13 @@ p.no-comments {
 }
 
 .woocommerce-error {
-	background-color: lighten($color__red, 10%);
+	background-color: color.adjust($color__red, $lightness: 10%);
 	border-radius: 3px;
 	list-style-type: none;
 	margin: 0;
 
 	li {
-		color: darken($color__red, 30%);
+		color: color.adjust($color__red, $lightness: -30%);
 
 		&:first-child::before {
 			content: "\f071";
@@ -457,7 +460,7 @@ p.no-comments {
 
 	&:hover,
 	&:hover:visited {
-		border-bottom: 2px solid darken($color__primary, 10%);
+		border-bottom: 2px solid color.adjust($color__primary, $lightness: -10%);
 		transform: translateY(-2px);
 		color: #fff;
 	}
@@ -471,7 +474,7 @@ p.no-comments {
 
 	table.wc-block-cart-items,
 	.wp-block-woocommerce-cart-order-summary-block {
-		border: 2px solid darken($color__gray, 10%);
+		border: 1px solid color.adjust($color__gray, $lightness: -5%);
 		border-radius: 0.75em;
 	}
 }
@@ -495,8 +498,12 @@ table.wc-block-cart-items {
 
 	.wc-block-cart-items__row {
 
+		.is-small &:not(.balls){
+			grid-template-columns: 25% 45% 30%;
+		}
+
 		.is-small &:not(:last-child) td {
-			border-bottom: 1px solid darken($color__gray, 10%);
+			border-bottom: 1px solid color.adjust($color__gray, $lightness: -10%);
 			padding-bottom: 32px;
 		}
 

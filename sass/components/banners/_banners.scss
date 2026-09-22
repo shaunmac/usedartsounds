@@ -1,3 +1,7 @@
+@use "../../abstracts/mixins/mixins" as *;
+@use "../../abstracts/variables/colors" as *;
+@use "sass:color";
+
 $header-text-outline-color: rgba($color__background-body, 0.4);
 
 .home-banner {
@@ -148,7 +152,7 @@ $header-text-outline-color: rgba($color__background-body, 0.4);
 				content: "";
 				display: block;
 				position: absolute;
-				background-color: darken($color__orange, 53%);
+				background-color: color.adjust($color__orange, $lightness: -53%);
 				border-radius: 100%;
 				opacity: 0.7;
 				filter: blur(30px);

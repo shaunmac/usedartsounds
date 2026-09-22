@@ -1,3 +1,9 @@
+
+@use "sass:map";
+@use "../variables/columns" as *;
+@use "../variables/colors" as *;
+@use "../variables/structure" as *;
+
 // Center block
 @mixin center-block {
 	display: block;
@@ -7,7 +13,7 @@
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-	width: map-get($columns, $numberColumns) - (($columns__margin * ($numberColumns - 1)) / $numberColumns );
+	width: calc(($columns__margin * ($numberColumns - 1)) / $numberColumns)
 }
 
 
@@ -22,10 +28,10 @@ $breakpoints: (
 @mixin breakpoint($breakpoint, $direction: min) {
 
 	//check if the supplied breakpoint exists in our breakpoits map
-	@if map-has-key($breakpoints, $breakpoint) {
-		$breakpoint-values: map-get($breakpoints, $breakpoint);
-		$breakpoint-min: map-get($breakpoint-values, min);
-		$breakpoint-max: map-get($breakpoint-values, max);
+	@if map.has-key($breakpoints, $breakpoint) {
+		$breakpoint-values: map.get($breakpoints, $breakpoint);
+		$breakpoint-min: map.get($breakpoint-values, min);
+		$breakpoint-max: map.get($breakpoint-values, max);
 
 		//check if we are writing styles for larger or smaller screens
 		@if $direction ==min {

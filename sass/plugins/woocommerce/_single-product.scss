@@ -1,3 +1,7 @@
+@use "../../abstracts/mixins/mixins" as *;
+@use "../../abstracts/variables/colors" as *;
+@use "sass:color";
+
 .single-product {
 
 	div.product {
@@ -261,7 +265,7 @@
 
 		&:link {
 			border: 1px solid $color__link;
-			background-color: lighten($color__link, 35%);
+			background-color: color.adjust($color__link, $lightness: 35%);
 		}
 
 		&:hover {
@@ -271,7 +275,7 @@
 
 		&:visited {
 			border: 1px solid $color__link-visited;
-			background-color: lighten($color__link-visited, 35%);
+			background-color: color.adjust($color__link-visited, $lightness: 35%);
 
 			&:hover {
 				background-color: $color__link-visited;
@@ -288,11 +292,11 @@
 	}
 
 	&.in-stock {
-		color: $woocommerce__color-success;
+		color: $wc-success;
 	}
 
 	&.out-of-stock {
-		color: $woocommerce__color-error;
+		color: $wc-danger;
 	}
 }
 

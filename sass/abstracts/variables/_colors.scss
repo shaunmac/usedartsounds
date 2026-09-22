@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $color__primary: #728cc4;
 $color__secondary: #c4aa72;
 $color__purple: #aa72c4;
@@ -19,7 +21,7 @@ $color__text-input-focus: #111;
 $color__link: $color__primary;
 
 $color__link-visited: $color__secondary; //gold
-$color__link-hover: lighten($color__primary, 15%);
+$color__link-hover: color.adjust($color__primary, $lightness: 15%);
 $color__text-main: #404040;
 $color__text-light: #d8e6ff;
 

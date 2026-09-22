@@ -1,5 +1,5 @@
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@use "abstracts/abstracts" as *;
 
 /*--------------------------------------------------------------
 # Generic
@@ -7,34 +7,38 @@
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@use "generic/normalize" as *;
 
 /* Box sizing
 --------------------------------------------- */
-@import "generic/box-sizing";
+@use "generic/box-sizing" as *;
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-@import "base/base";
+@use "base/base" as *;
 
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-@import "layouts/header";
-@import "layouts/search";
-@import "layouts/footer";
-@import "components/navigation/navigation";
+// @use "layouts/content-sidebar" as *; // Uncomment this line for a sidebar on right side of your content.
+// @use "layouts/sidebar-content" as *; // Uncomment this line for a sidebar on left side of your content.
+@use "layouts/header" as *;
+@use "layouts/search" as *;
+@use "layouts/footer" as *;
+@use "components/navigation/navigation" as *;
 
 /* Accessibility
 --------------------------------------------- */
-@import "utilities/accessibility";
+@use "utilities/accessibility" as *;
 
 /* Alignments
 --------------------------------------------- */
-@import "utilities/alignments";
+@use "utilities/alignments" as *;
+
+@use "plugins/woocommerce/single-product" as *;
+
+@use "plugins/woocommerce/components" as *;
 
 .product_meta .tagged_as {
 	margin-top: 14px;

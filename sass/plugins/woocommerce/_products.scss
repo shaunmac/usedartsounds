@@ -1,3 +1,6 @@
+@use "../../abstracts/mixins/mixins" as *;
+@use "../../abstracts/variables/colors" as *;
+
 ul.products {
 	margin: 0;
 	padding: 0;

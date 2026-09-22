@@ -1,5 +1,7 @@
-@import "variables/colors";
-@import "variables/typography";
-@import "variables/structure";
-@import "variables/columns";
-@import "mixins/mixins";
+
+
+@use "variables/colors" as *;
+@use "variables/structure" as *;
+@use "variables/typography" as *;
+@use "variables/columns" as *;
+@use "mixins/mixins" as *;
