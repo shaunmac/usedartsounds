@@ -753,8 +753,6 @@
 		}
 	}
 
-
-
 	address {
 		padding: $wc-space-5;
 		font-style: normal;
@@ -842,6 +840,7 @@
 	}
 }
 
+/* stylelint-disable-next-line selector-class-pattern */
 #add_payment_method #payment,
 .woocommerce-PaymentMethods,
 .woocommerce-SavedPaymentMethods {
@@ -1009,6 +1008,7 @@
 	}
 
 	// Password change fieldset
+	/* stylelint-disable-next-line selector-class-pattern */
 	#account_display_name + span,
 	span em {
 		display: block;
@@ -1033,6 +1033,7 @@
 		width: 100%;
 	}
 
+	/* stylelint-disable-next-line selector-class-pattern */
 	#customer_login.u-columns {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -1109,7 +1110,7 @@
 				background-position: center;
 				background-repeat: no-repeat;
 				border-radius: 0 0 0.75em 0.75em;
-				background-image: url("https://usedartsounds.com/wp-content/uploads/2026/09/registerbg.jpg");
+				background-image: url(https://usedartsounds.com/wp-content/uploads/2026/09/registerbg.jpg);
 
 				@media (min-width: $wc-bp-md) {
 					width: 60%;

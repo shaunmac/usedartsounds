@@ -73,9 +73,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-// @use "layouts/content-sidebar" as *; // Uncomment this line for a sidebar on right side of your content.
-// @use "layouts/sidebar-content" as *; // Uncomment this line for a sidebar on left side of your content.
-
 @use "layouts/search" as *;
 @use "layouts/footer" as *;
 

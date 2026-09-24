@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "../../abstracts/variables/colors" as *;
 @use "../../abstracts/mixins/mixins" as *;
+
 /**
  * Header cart
  */
@@ -476,6 +477,7 @@ p.no-comments {
 	.wp-block-woocommerce-cart-order-summary-block {
 		border: 1px solid color.adjust($color__gray, $lightness: -5%);
 		border-radius: 0.75em;
+		background-color: $color__background-body;
 	}
 }
 
@@ -494,17 +496,31 @@ div.wc-block-components-totals-wrapper {
 	}
 }
 
+.wc-block-cart-item__quantity .wc-block-components-quantity-selector {
+	width: 100%;
+}
+
 table.wc-block-cart-items {
+
+	.is-small & {
+
+		.wc-block-cart-item {
+
+			&s__row {
+				grid-template-columns: 22% 60% 18%;
+			}
+
+			&s__row &__quantity {
+				padding-right: 0;
+			}
+		}
+	}
 
 	.wc-block-cart-items__row {
 
-		.is-small &:not(.balls){
-			grid-template-columns: 25% 45% 30%;
-		}
-
-		.is-small &:not(:last-child) td {
-			border-bottom: 1px solid color.adjust($color__gray, $lightness: -10%);
-			padding-bottom: 32px;
+		.wc-block-cart-items__header {
+			display: grid;
+			grid-template-columns: 25% 50% 25%;
 		}
 
 		.wc-block-cart-item {
@@ -522,6 +538,10 @@ table.wc-block-cart-items {
 
 .wc-block-cart-items__row td {
 	border-bottom: 2px solid $color__gray;
+
+	.is-small table.wc-block-cart-items &.wc-block-cart-item__product {
+		grid-column-end: 3;
+	}
 }
 
 .is-large.wc-block-cart span.wc-block-cart__totals-title {

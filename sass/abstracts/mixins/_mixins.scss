@@ -13,7 +13,7 @@
 
 // Column width with margin
 @mixin column-width($numberColumns: 3) {
-	width: calc(($columns__margin * ($numberColumns - 1)) / $numberColumns)
+	width: calc(($columns__margin * ($numberColumns - 1)) / $numberColumns);
 }
 
 
