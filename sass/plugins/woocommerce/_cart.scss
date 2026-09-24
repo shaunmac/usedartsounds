@@ -2,6 +2,7 @@
 @use "sass:color";
 
 .woocommerce-cart {
+
 	.entry-title.font-header {
 		text-align: center;
 	}
@@ -97,6 +98,7 @@ table.wc-block-cart-items .wc-block-cart-items__header {
 }
 
 @media screen and (min-width: 734px) {
+	
 	table.wc-block-cart-items .wc-block-cart-items__header {
 		grid-template-columns: 22% 63% 18%;
 	}
