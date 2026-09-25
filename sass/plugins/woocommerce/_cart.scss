@@ -112,7 +112,7 @@ table.wc-block-cart-items .wc-block-cart-items__header .wc-block-cart-items__hea
 	padding-left: 16px;
 }
 
-.wc-block-components-product-metadata .wc-block-components-product-metadata__description > p {
+div.wc-block-components-product-metadata .wc-block-components-product-metadata__description > p {
 	margin: 16px 0;
 }
 
@@ -301,7 +301,7 @@ table.wc-block-cart-items .wc-block-cart-items__row .wc-block-cart-item__quantit
 					border-bottom: 2px solid $color__gray;
 
 					&::after {
-						content: "Totoal";
+						content: "Total";
 						width: 2em;
 						height: 1em;
 						position: absolute;
