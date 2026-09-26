@@ -393,7 +393,7 @@ p.no-comments {
 }
 
 .woocommerce-error {
-	background-color: color.adjust($color__red, $lightness: 10%);
+	background-color: color.adjust($color__red, $lightness: 30%);
 	border-radius: 3px;
 	list-style-type: none;
 	margin: 0;
