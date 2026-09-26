@@ -1,5 +1,6 @@
 @use "../../abstracts/mixins/mixins" as *;
 @use "../../abstracts/variables/colors" as *;
+@use "../../abstracts/variables/columns" as *;
 @use "sass:color";
 
 .single-product {
@@ -117,7 +118,11 @@
 				flex-wrap: wrap;
 				justify-content: space-between;
 				align-items: baseline;
-				margin-top: 0;
+				margin-top: 15px;
+
+				@include breakpoint(lg) {
+					margin-top: 0;
+				}
 
 				.price {
 					width: 33%;
@@ -228,6 +233,7 @@
 		}
 
 		&.woocommerce-error {
+
 			.button {
 				font-size: 0.8em;
 				border-width: 1px;
