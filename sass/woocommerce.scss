@@ -45,6 +45,11 @@ $woocommerce__color-info: #3d9cd2;
 @use "plugins/woocommerce/widgets" as *;
 
 /**
+ * WooCommerce messages
+ */
+@use "plugins/woocommerce/messages" as *;
+
+/**
  * WooCommerce cart
  */
 @use "plugins/woocommerce/cart" as *;
