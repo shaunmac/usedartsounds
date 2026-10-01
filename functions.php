@@ -400,3 +400,53 @@ add_action( 'template_redirect', function () {
 	wc_add_notice( 'Error sample — that action could not be completed.', 'error' );
 	wc_add_notice( 'Confirm your email address to check for past orders and linek them to your account. <a href="#" class="button wc-forward">Confirm Email</a>', 'notice');
 } );
+
+/**
+ * Preview WooCommerce notices on the single product page.
+ * Append ?message-test to any product URL.
+ */
+add_action( 'wp', 'shaun_test_woocommerce_product_notices' );
+function shaun_test_woocommerce_product_notices() {
+	if ( is_admin() || ! function_exists( 'wc_add_notice' ) ) {
+		return;
+	}
+
+	if ( ! is_product() ) {
+		return;
+	}
+
+	// phpcs:ignore WordPress.Security.NonceVerification.Recommended
+	if ( ! isset( $_GET['message-test'] ) ) {
+		return;
+	}
+
+	$cart_url = function_exists( 'wc_get_cart_url' ) ? wc_get_cart_url() : home_url( '/cart/' );
+	$shop_url = function_exists( 'wc_get_page_permalink' ) ? wc_get_page_permalink( 'shop' ) : home_url( '/shop/' );
+
+	wc_add_notice(
+		sprintf(
+			'This is a WooCommerce <strong>error</strong> notice. <a href="%s" class="button wc-forward">%s</a>',
+			esc_url( $shop_url ),
+			esc_html__( 'Continue shopping', 'woocommerce' )
+		),
+		'error'
+	);
+
+	wc_add_notice(
+		sprintf(
+			'This is a WooCommerce <strong>success</strong> message. <a href="%s" class="button wc-forward">%s</a>',
+			esc_url( $cart_url ),
+			esc_html__( 'View cart', 'woocommerce' )
+		),
+		'success'
+	);
+
+	wc_add_notice(
+		sprintf(
+			'This is a WooCommerce <strong>info</strong> notice. <a href="%s" class="button wc-forward">%s</a>',
+			esc_url( $shop_url ),
+			esc_html__( 'Continue shopping', 'woocommerce' )
+		),
+		'notice'
+	);
+}
