@@ -238,6 +238,11 @@
 						@include breakpoint(md) {
 							max-width: 18ch;
 						}
+
+						@include breakpoint(lg) {
+							max-width: unset;
+							white-space: inherit;
+						}
 					}
 				}
 				
