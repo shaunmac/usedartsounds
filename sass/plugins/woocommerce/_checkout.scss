@@ -2,10 +2,119 @@
 @use "../../abstracts/variables/colors" as *;
 @use "../../abstracts/mixins/mixins" as *;
 
-.woocommerce-checkout .wc-block-components-button {
-	background-color: $color__primary;
-	border-radius: 0.75em;
-	padding: 16px 0;
+.woocommerce-checkout {
+
+	.wc-block-components-button {
+		background-color: $color__primary;
+		border-radius: 0.75em;
+		padding: 16px 0;
+	}
+
+	.entry {
+
+		&-header {
+			width: 100vw;
+			position: fixed;
+			top: 3.4em;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@include breakpoint(md) {
+				top: 9.7em;
+			}
+		}
+
+		&-title.font-header {
+			text-align: center;
+			font-size: 13.2vw;
+			line-height: 1;
+			letter-spacing: 0.05em;
+			margin: 0 0 0 8px;
+			padding: 0;
+			color: $color__background-body;
+			//-webkit-text-stroke: 1px $wc-slate-600;
+			text-shadow:
+				-2px -2px 0 $wc-slate-500,
+				2px -2px 0 $wc-slate-500,
+				-2px  2px 0 $wc-slate-500,
+				2px  2px 0 $wc-slate-500;
+		}
+
+		&-content {
+			margin-top: 12.9vw;
+			position: relative;
+
+			@include breakpoint(ml) {
+				margin-top: 11.7vw;
+			}
+
+		}
+	}
+
+	.wp-block {
+
+		&-woocommerce-checkout {
+			padding-top: 15px;
+
+			&-order-summary-block .wc-block-components-checkout-order-summary__title .wc-block-components-checkout-order-summary__title-text {
+
+				@include breakpoint(ml) {
+					margin: 14px 0 1px 0;
+				}
+			}
+		}
+	}
+
+	.wc-block {
+
+		&-components {
+
+			&-sidebar {
+
+				.wp-block-woocommerce-checkout-order-summary-block {
+					border: 1px solid $wc-slate-500;
+					border-radius: 0.75em;
+					background-color: $color__background-body;
+
+					.wc-block-components-checkout-order-summary__title {
+						margin: 0;
+						padding-left: 15px;
+						padding-right: 15px;
+
+						&-icon {
+							width: 50px;
+							text-align: center;
+							margin-left: 15px;
+						}
+					}
+				}
+
+				&-layout {
+					border-radius: 0.75em;
+
+					.wc-block-components-main {
+						border: 1px solid $wc-slate-500;
+						border-radius: 0.75em;
+						background-color: $color__background-body;
+						padding: 15px;
+					}
+				}
+			}
+
+			&-totals-wrapper {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+
+			&-order-summary {
+				padding: 0;
+			}
+		}
+
+		&-checkout__actions {
+			margin-bottom: 0;
+		}
+	}
 }
 
 @media screen and (min-width: 768px) {
