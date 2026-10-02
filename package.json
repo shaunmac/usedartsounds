@@ -38,7 +38,7 @@
   "scripts": {
     "compile:css": "sass sass/:assets/css/ --style=expanded --source-map",
     "watch": "sass sass/:assets/css/ --watch --style=expanded --source-map",
-    "compress:css": "sass sass/:assets/css/ --style=compressed --no-source-map",
+    "compress:css": "sass sass/:assets/css/ --style=compressed --no-source-map && rm -f assets/css/*.css.map",
     "compile:rtl": "rtlcss assets/css/style.css assets/css/style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
